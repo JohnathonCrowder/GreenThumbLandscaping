@@ -2,14 +2,6 @@
 
 {% block title %}Our Services - Green Edge Landscaping{% endblock %}
 
-{% block extra_css %}
-<style>
-    .service-card-inner {
-        min-height: 300px;
-    }
-</style>
-{% endblock %}
-
 {% block content %}
 <!-- Services Hero -->
 <header class="page-header services-header">
@@ -23,79 +15,229 @@
     <!-- Service Introduction -->
     <section class="service-intro" data-aos="fade-up">
         <h2>Our Comprehensive Services</h2>
-        <p>At Green Edge Landscaping, we offer a diverse range of landscaping services tailored to meet your specific outdoor needs. Whether you're looking to create a new landscape design, maintain your existing garden, or install hardscape features, our team of experienced professionals is here to bring your vision to life.</p>
+        <p>At Green Edge Landscaping, we offer a diverse range of landscaping services tailored to meet your specific outdoor needs. From lawn care to tree maintenance, our experienced team is dedicated to enhancing and preserving the beauty of your landscape.</p>
     </section>
 
     <!-- Services List -->
     <section class="service-list">
         <!-- Lawn Care -->
-        <div class="service-item magnetic" data-aos="fade-right">
+        <div class="service-item magnetic" data-aos="fade-up">
             <div class="service-card-inner">
-                <div class="service-icon">
-                    <i class="fas fa-leaf fa-3x"></i>
+                <div class="service-front">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf fa-3x"></i>
+                    </div>
                     <h3>Lawn Care</h3>
+                    <p>Keep your lawn lush, healthy, and vibrant year-round.</p>
                 </div>
-                <div class="service-hover">
+                <div class="service-back">
+                    <h4>Our Lawn Care Services:</h4>
                     <ul>
-                        <li><span class="progress" style="width:95%"></span>Weekly Mowing</li>
-                        <li><span class="progress" style="width:90%"></span>Fertilization</li>
-                        <li><span class="progress" style="width:85%"></span>Aeration</li>
-                        <li><span class="progress" style="width:92%"></span>Weed Control</li>
+                        <li>
+                            <span class="feature">Weekly Mowing</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:95%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature">Fertilization</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:90%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature">Weed Control</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:92%"></div>
+                            </div>
+                        </li>
                     </ul>
+                    <a href="{{ url_for('contact') }}" class="card-btn">Request Service</a>
                 </div>
             </div>
         </div>
         
         <!-- Garden Design -->
-        <div class="service-item magnetic" data-aos="fade-left">
+        <div class="service-item magnetic" data-aos="fade-up" data-aos-delay="100">
             <div class="service-card-inner">
-                <div class="service-icon">
-                    <i class="fas fa-seedling fa-3x"></i>
+                <div class="service-front">
+                    <div class="service-icon">
+                        <i class="fas fa-seedling fa-3x"></i>
+                    </div>
                     <h3>Garden Design</h3>
+                    <p>Create stunning outdoor spaces that reflect your style.</p>
                 </div>
-                <div class="service-hover">
+                <div class="service-back">
+                    <h4>Our Design Services:</h4>
                     <ul>
-                        <li><span class="progress" style="width:97%"></span>Custom Designs</li>
-                        <li><span class="progress" style="width:94%"></span>Plant Selection</li>
-                        <li><span class="progress" style="width:92%"></span>Installation</li>
-                        <li><span class="progress" style="width:88%"></span>Seasonal Updates</li>
+                        <li>
+                            <span class="feature">Custom Designs</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:97%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature">Plant Selection</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:94%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature">Installation</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:92%"></div>
+                            </div>
+                        </li>
                     </ul>
+                    <a href="{{ url_for('contact') }}" class="card-btn">Request Design</a>
                 </div>
             </div>
         </div>
 
         <!-- Hardscaping -->
-        <div class="service-item magnetic" data-aos="fade-right">
+        <div class="service-item magnetic" data-aos="fade-up" data-aos-delay="200">
             <div class="service-card-inner">
-                <div class="service-icon">
-                    <i class="fas fa-mountain fa-3x"></i>
+                <div class="service-front">
+                    <div class="service-icon">
+                        <i class="fas fa-mountain fa-3x"></i>
+                    </div>
                     <h3>Hardscaping</h3>
+                    <p>Enhance your outdoor living with beautiful structures.</p>
                 </div>
-                <div class="service-hover">
+                <div class="service-back">
+                    <h4>Our Hardscaping Services:</h4>
                     <ul>
-                        <li><span class="progress" style="width:96%"></span>Patios & Walkways</li>
-                        <li><span class="progress" style="width:93%"></span>Retaining Walls</li>
-                        <li><span class="progress" style="width:89%"></span>Water Features</li>
-                        <li><span class="progress" style="width:91%"></span>Outdoor Kitchens</li>
+                        <li>
+                            <span class="feature">Patios & Walkways</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:96%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature">Retaining Walls</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:93%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature">Outdoor Kitchens</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:91%"></div>
+                            </div>
+                        </li>
                     </ul>
+                    <a href="{{ url_for('contact') }}" class="card-btn">Request Quote</a>
                 </div>
             </div>
         </div>
 
         <!-- Irrigation Systems -->
-        <div class="service-item magnetic" data-aos="fade-left">
+        <div class="service-item magnetic" data-aos="fade-up" data-aos-delay="300">
             <div class="service-card-inner">
-                <div class="service-icon">
-                    <i class="fas fa-tint fa-3x"></i>
+                <div class="service-front">
+                    <div class="service-icon">
+                        <i class="fas fa-tint fa-3x"></i>
+                    </div>
                     <h3>Irrigation Systems</h3>
+                    <p>Efficient watering solutions for a thriving landscape.</p>
                 </div>
-                <div class="service-hover">
+                <div class="service-back">
+                    <h4>Our Irrigation Services:</h4>
                     <ul>
-                        <li><span class="progress" style="width:98%"></span>System Design</li>
-                        <li><span class="progress" style="width:94%"></span>Installation</li>
-                        <li><span class="progress" style="width:96%"></span>Maintenance</li>
-                        <li><span class="progress" style="width:90%"></span>Smart Controllers</li>
+                        <li>
+                            <span class="feature">System Design</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:98%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature">Installation</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:94%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature">Maintenance</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:96%"></div>
+                            </div>
+                        </li>
                     </ul>
+                    <a href="{{ url_for('contact') }}" class="card-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tree Care -->
+        <div class="service-item magnetic" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card-inner">
+                <div class="service-front">
+                    <div class="service-icon">
+                        <i class="fas fa-tree fa-3x"></i>
+                    </div>
+                    <h3>Tree Care</h3>
+                    <p>Expert care for the health and beauty of your trees.</p>
+                </div>
+                <div class="service-back">
+                    <h4>Our Tree Care Services:</h4>
+                    <ul>
+                        <li>
+                            <span class="feature">Pruning & Trimming</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:97%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature">Disease Management</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:95%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature">Tree Removal</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:93%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="{{ url_for('contact') }}" class="card-btn">Schedule Service</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seasonal Maintenance -->
+        <div class="service-item magnetic" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-card-inner">
+                <div class="service-front">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt fa-3x"></i>
+                    </div>
+                    <h3>Seasonal Maintenance</h3>
+                    <p>Year-round care to keep your landscape pristine.</p>
+                </div>
+                <div class="service-back">
+                    <h4>Our Seasonal Services:</h4>
+                    <ul>
+                        <li>
+                            <span class="feature">Spring Cleanup</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:96%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature">Fall Leaf Removal</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:98%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature">Winter Preparation</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width:94%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="{{ url_for('contact') }}" class="card-btn">Get Started</a>
                 </div>
             </div>
         </div>
@@ -104,7 +246,7 @@
     <!-- Call to Action -->
     <section class="cta-section" data-aos="zoom-in">
         <h2>Ready to Transform Your Outdoor Space?</h2>
-        <p>Our team is prepared to bring your landscaping vision to life. Contact us today for a free consultation and estimate.</p>
+        <p>Our team of experts is prepared to bring your landscaping vision to life. Contact us today for a free consultation and estimate.</p>
         <a href="{{ url_for('contact') }}" class="cta-button magnetic">Get Started</a>
     </section>
 </main>
@@ -122,6 +264,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'rotateY(0deg)';
         });
+    });
+
+    // Animate progress bars
+    const progressBars = document.querySelectorAll('.progress');
+    progressBars.forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = '0';
+        setTimeout(() => {
+            bar.style.width = width;
+        }, 500);
     });
 });
 </script>

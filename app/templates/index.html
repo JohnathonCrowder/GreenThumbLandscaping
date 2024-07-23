@@ -1,40 +1,160 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+
+{% block title %}Green Edge Landscaping - Transform Your Outdoor Space{% endblock %}
 
 {% block content %}
+<!-- Hero Section -->
 <header class="hero">
-    <div class="hero-content">
-        <h1>Welcome to Green Edge Landscaping</h1>
-        <p>Transform your outdoor space into a beautiful oasis</p>
-        <a href="{{ url_for('contact') }}" class="cta-button">Get a Free Quote</a>
+    <div class="hero-content" data-aos="fade-up">
+        <h1>Transform Your Outdoor Space</h1>
+        <p>Expert landscaping services to create your dream garden</p>
+        <a href="{{ url_for('contact') }}" class="cta-button magnetic">Get a Free Quote</a>
     </div>
 </header>
 
-<main>
-    <section class="about">
-        <h2>About Us</h2>
-        <p>Green Edge Landscaping has been creating stunning outdoor environments for over 15 years. Our team of expert landscapers is dedicated to bringing your vision to life.</p>
-    </section>
-
-    <section class="featured-services">
-        <h2>Our Services</h2>
-        <div class="service-grid">
-            <div class="service-item">
-                <img src="{{ url_for('static', filename='images/lawn-care.jpg') }}" alt="Lawn Care">
-                <h3>Lawn Care</h3>
-                <p>Keep your lawn lush and healthy year-round.</p>
-            </div>
-            <div class="service-item">
-                <img src="{{ url_for('static', filename='images/garden-design.jpg') }}" alt="Garden Design">
-                <h3>Garden Design</h3>
-                <p>Custom garden designs to suit your style and space.</p>
-            </div>
-            <div class="service-item">
-                <img src="{{ url_for('static', filename='images/hardscaping.jpg') }}" alt="Hardscaping">
-                <h3>Hardscaping</h3>
-                <p>Beautiful patios, walkways, and retaining walls.</p>
+<main class="home-page">
+    <!-- About Us Section -->
+    <section class="about-section" data-aos="fade-up">
+        <div class="container">
+            <h2>Welcome to Green Edge Landscaping</h2>
+            <p>With over 15 years of experience, we're passionate about creating beautiful, sustainable landscapes that enhance your property and lifestyle. Our team of expert landscapers combines creativity with horticultural knowledge to deliver stunning results.</p>
+            <div class="about-features">
+                <div class="feature" data-aos="fade-right">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Eco-Friendly Practices</h3>
+                    <p>We prioritize sustainable landscaping methods to protect the environment.</p>
+                </div>
+                <div class="feature" data-aos="fade-up">
+                    <i class="fas fa-award"></i>
+                    <h3>Award-Winning Designs</h3>
+                    <p>Our innovative designs have earned recognition in the landscaping industry.</p>
+                </div>
+                <div class="feature" data-aos="fade-left">
+                    <i class="fas fa-users"></i>
+                    <h3>Expert Team</h3>
+                    <p>Our certified professionals ensure top-quality service for every project.</p>
+                </div>
             </div>
         </div>
-        <a href="{{ url_for('services') }}" class="button">View All Services</a>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview" data-aos="fade-up">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p>Discover how we can enhance your outdoor living experience:</p>
+            <div class="services-grid">
+                <div class="service-card" data-aos="flip-left">
+                    <img src="{{ url_for('static', filename='images/lawn-care.jpg') }}" alt="Lawn Care">
+                    <h3>Lawn Care</h3>
+                    <p>Keep your lawn lush and healthy year-round with our expert maintenance.</p>
+                </div>
+                <div class="service-card" data-aos="flip-left" data-aos-delay="100">
+                    <img src="{{ url_for('static', filename='images/garden-design.jpg') }}" alt="Garden Design">
+                    <h3>Garden Design</h3>
+                    <p>Transform your space with custom garden designs tailored to your style.</p>
+                </div>
+                <div class="service-card" data-aos="flip-left" data-aos-delay="200">
+                    <img src="{{ url_for('static', filename='images/hardscaping.jpg') }}" alt="Hardscaping">
+                    <h3>Hardscaping</h3>
+                    <p>Elevate your outdoor living with beautiful patios, walkways, and more.</p>
+                </div>
+            </div>
+            <a href="{{ url_for('services') }}" class="button magnetic">View All Services</a>
+        </div>
+    </section>
+
+    <!-- Recent Projects -->
+    <section class="recent-projects" data-aos="fade-up">
+        <div class="container">
+            <h2>Recent Projects</h2>
+            <p>Take a look at some of our latest landscaping transformations:</p>
+            <div class="project-slider">
+                <div class="project-slide">
+                    <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Modern Backyard Retreat">
+                    <div class="project-info">
+                        <h3>Modern Backyard Retreat</h3>
+                        <p>A complete backyard transformation featuring a custom patio, fire pit, and lush plantings.</p>
+                    </div>
+                </div>
+                <div class="project-slide">
+                    <img src="{{ url_for('static', filename='images/project2.jpg') }}" alt="Drought-Resistant Front Yard">
+                    <div class="project-info">
+                        <h3>Drought-Resistant Front Yard</h3>
+                        <p>An eco-friendly landscape design using native plants and efficient irrigation.</p>
+                    </div>
+                </div>
+                <div class="project-slide">
+                    <img src="{{ url_for('static', filename='images/project3.jpg') }}" alt="Luxurious Outdoor Kitchen">
+                    <div class="project-info">
+                        <h3>Luxurious Outdoor Kitchen</h3>
+                        <p>A high-end outdoor living space complete with a fully-equipped kitchen and dining area.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" data-aos="fade-up">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"Green Edge transformed our backyard into a stunning oasis. Their attention to detail and professionalism were impressive!"</p>
+                    <cite>- Sarah Johnson</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"We've been using their lawn care service for years, and our yard has never looked better. Highly recommended!"</p>
+                    <cite>- Michael Chen</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"The hardscaping work they did on our patio exceeded our expectations. It's now our favorite place to entertain!"</p>
+                    <cite>- Emily Rodriguez</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section" data-aos="zoom-in">
+        <div class="container">
+            <h2>Ready to Transform Your Outdoor Space?</h2>
+            <p>Contact us today for a free consultation and let's bring your landscaping vision to life!</p>
+            <a href="{{ url_for('contact') }}" class="cta-button magnetic">Get Started</a>
+        </div>
     </section>
 </main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.project-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 5000
+        });
+
+        $('.testimonial-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 6000
+        });
+    });
+</script>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 {% endblock %}
