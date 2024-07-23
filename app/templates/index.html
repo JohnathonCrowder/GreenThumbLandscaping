@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Green Edge Landscaping</h1>
+        <p>Transform your outdoor space into a beautiful oasis</p>
+        <a href="{{ url_for('contact') }}" class="cta-button">Get a Free Quote</a>
+    </div>
+</header>
+
+<main>
+    <section class="about">
+        <h2>About Us</h2>
+        <p>Green Edge Landscaping has been creating stunning outdoor environments for over 15 years. Our team of expert landscapers is dedicated to bringing your vision to life.</p>
+    </section>
+
+    <section class="featured-services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <img src="{{ url_for('static', filename='images/lawn-care.jpg') }}" alt="Lawn Care">
+                <h3>Lawn Care</h3>
+                <p>Keep your lawn lush and healthy year-round.</p>
+            </div>
+            <div class="service-item">
+                <img src="{{ url_for('static', filename='images/garden-design.jpg') }}" alt="Garden Design">
+                <h3>Garden Design</h3>
+                <p>Custom garden designs to suit your style and space.</p>
+            </div>
+            <div class="service-item">
+                <img src="{{ url_for('static', filename='images/hardscaping.jpg') }}" alt="Hardscaping">
+                <h3>Hardscaping</h3>
+                <p>Beautiful patios, walkways, and retaining walls.</p>
+            </div>
+        </div>
+        <a href="{{ url_for('services') }}" class="button">View All Services</a>
+    </section>
+</main>
+{% endblock %}

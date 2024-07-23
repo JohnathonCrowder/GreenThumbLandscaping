@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class="page-header">
+    <h1>Our Services</h1>
+</header>
+
+<main class="services-page">
+    <section class="service-list">
+        <div class="service-item">
+            <img src="{{ url_for('static', filename='images/lawn-care.jpg') }}" alt="Lawn Care">
+            <h2>Lawn Care</h2>
+            <p>Our comprehensive lawn care services include mowing, fertilization, aeration, and weed control to keep your lawn looking its best.</p>
+        </div>
+        <div class="service-item">
+            <img src="{{ url_for('static', filename='images/garden-design.jpg') }}" alt="Garden Design">
+            <h2>Garden Design</h2>
+            <p>From colorful flower beds to vegetable gardens, we create custom garden designs that reflect your personal style and complement your home.</p>
+        </div>
+        <div class="service-item">
+            <img src="{{ url_for('static', filename='images/hardscaping.jpg') }}" alt="Hardscaping">
+            <h2>Hardscaping</h2>
+            <p>Enhance your outdoor living space with beautiful patios, walkways, retaining walls, and other hardscape features.</p>
+        </div>
+        <div class="service-item">
+            <img src="{{ url_for('static', filename='images/irrigation.jpg') }}" alt="Irrigation Systems">
+            <h2>Irrigation Systems</h2>
+            <p>We design and install efficient irrigation systems to keep your landscape properly watered and healthy.</p>
+        </div>
+        <div class="service-item">
+            <img src="{{ url_for('static', filename='images/tree-service.jpg') }}" alt="Tree Service">
+            <h2>Tree Service</h2>
+            <p>Our expert arborists provide tree trimming, removal, and health care services to maintain the beauty and safety of your property.</p>
+        </div>
+    </section>
+</main>
+{% endblock %}
