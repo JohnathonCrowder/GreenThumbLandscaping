@@ -1,80 +1,64 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Create cursor elements
-    const cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    const cursorDot = document.createElement('div');
-    cursorDot.className = 'custom-cursor-dot';
-    document.body.appendChild(cursor);
-    document.body.appendChild(cursorDot);
+    const cursor = document.querySelector('.custom-cursor');
+    const cursorDot = document.querySelector('.custom-cursor-dot');
 
+    let mouseX = 0;
+    let mouseY = 0;
     let cursorX = 0;
     let cursorY = 0;
     let dotX = 0;
     let dotY = 0;
 
-    // Update cursor position smoothly
-    function animate() {
-        cursorX += (mousePosX - cursorX) * 0.1;
-        cursorY += (mousePosY - cursorY) * 0.1;
-        dotX += (mousePosX - dotX) * 0.2;
-        dotY += (mousePosY - dotY) * 0.2;
+    const updatePosition = () => {
+        // Smooth out the cursor circle movement
+        cursorX += (mouseX - cursorX) * 0.1;
+        cursorY += (mouseY - cursorY) * 0.1;
 
-        cursor.style.left = cursorX + 'px';
-        cursor.style.top = cursorY + 'px';
-        cursorDot.style.left = dotX + 'px';
-        cursorDot.style.top = dotY + 'px';
+        // The dot follows the mouse position directly
+        dotX = mouseX;
+        dotY = mouseY;
 
-        requestAnimationFrame(animate);
-    }
+        // Calculate offsets to center the cursor circle around the dot
+        const cursorSize = cursor.offsetWidth;
+        const dotSize = cursorDot.offsetWidth;
+        const cursorOffset = (cursorSize - dotSize) / 2;
 
-    let mousePosX = 0;
-    let mousePosY = 0;
+        cursor.style.transform = `translate(${cursorX - cursorOffset}px, ${cursorY - cursorOffset}px)`;
+        cursorDot.style.transform = `translate(${dotX}px, ${dotY}px)`;
 
-    document.addEventListener('mousemove', function(e) {
-        mousePosX = e.clientX;
-        mousePosY = e.clientY;
-    });
-
-    // Magnetic hover effect
-    const magneticElements = document.querySelectorAll('.magnetic');
-    magneticElements.forEach(el => {
-        el.addEventListener('mousemove', function(e) {
-            const rect = this.getBoundingClientRect();
-            const centerX = rect.left + rect.width / 2;
-            const centerY = rect.top + rect.height / 2;
-            const deltaX = Math.floor((centerX - e.clientX) * -0.5);
-            const deltaY = Math.floor((centerY - e.clientY) * -0.5);
-
-            cursor.style.transition = 'transform 0.2s ease-out';
-            cursor.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(1.5)`;
-        });
-
-        el.addEventListener('mouseleave', function() {
-            cursor.style.transition = 'transform 0.2s ease-out';
-            cursor.style.transform = 'translate(0, 0) scale(1)';
-        });
-    });
-
-    animate();
-
-    // Hide default cursor
-    document.body.style.cursor = 'none';
-
-    // Special cursor states
-    const cursorElements = {
-        '.link': 'link',
-        'button': 'pointer',
-        'a': 'pointer'
+        requestAnimationFrame(updatePosition);
     };
 
-    for (let selector in cursorElements) {
-        document.querySelectorAll(selector).forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursor.classList.add('cursor-' + cursorElements[selector]);
-            });
-            el.addEventListener('mouseleave', () => {
-                cursor.classList.remove('cursor-' + cursorElements[selector]);
-            });
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    updatePosition();
+
+    // Magnetic effect for elements with 'magnetic' class
+    const magneticElements = document.querySelectorAll('.magnetic');
+    magneticElements.forEach(elem => {
+        elem.addEventListener('mousemove', function(e) {
+            const rect = this.getBoundingClientRect();
+            const elemX = rect.left + rect.width / 2;
+            const elemY = rect.top + rect.height / 2;
+            const deltaX = elemX - e.clientX;
+            const deltaY = elemY - e.clientY;
+            
+            cursor.style.transform = `translate(${e.clientX - cursor.offsetWidth/2 + deltaX * 0.2}px, ${e.clientY - cursor.offsetHeight/2 + deltaY * 0.2}px) scale(1.5)`;
+            cursorDot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
         });
-    }
+
+        elem.addEventListener('mouseleave', function() {
+            cursor.style.transform = '';
+        });
+    });
+
+    // Change cursor style for clickable elements
+    const clickables = document.querySelectorAll('a, button, input, textarea, .clickable');
+    clickables.forEach(elem => {
+        elem.addEventListener('mouseenter', () => cursor.classList.add('cursor-clickable'));
+        elem.addEventListener('mouseleave', () => cursor.classList.remove('cursor-clickable'));
+    });
 });
