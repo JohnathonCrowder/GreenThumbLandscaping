@@ -1,91 +1,128 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+
+{% block title %}Our Services - Green Edge Landscaping{% endblock %}
+
+{% block extra_css %}
+<style>
+    .service-card-inner {
+        min-height: 300px;
+    }
+</style>
+{% endblock %}
 
 {% block content %}
+<!-- Services Hero -->
 <header class="page-header services-header">
-    <div class="header-content">
-        <h1>Our Services</h1>
-        <p>Transforming outdoor spaces with expertise and passion</p>
+    <div class="header-content" data-aos="fade-up">
+        <h1>Professional Landscaping Services</h1>
+        <p>Transform your outdoor space with our expert solutions</p>
     </div>
 </header>
 
 <main class="services-page">
-    <section class="service-intro">
-        <h2>Comprehensive Landscaping Solutions</h2>
-        <p>At Green Edge Landscaping, we offer a wide range of services to meet all your outdoor needs. Our team of experienced professionals is dedicated to creating and maintaining beautiful, functional landscapes that enhance your property's value and your quality of life.</p>
+    <!-- Service Introduction -->
+    <section class="service-intro" data-aos="fade-up">
+        <h2>Our Comprehensive Services</h2>
+        <p>At Green Edge Landscaping, we offer a diverse range of landscaping services tailored to meet your specific outdoor needs. Whether you're looking to create a new landscape design, maintain your existing garden, or install hardscape features, our team of experienced professionals is here to bring your vision to life.</p>
     </section>
 
+    <!-- Services List -->
     <section class="service-list">
-        <div class="service-item">
-            <div class="service-icon">
-                <i class="fas fa-leaf"></i>
+        <!-- Lawn Care -->
+        <div class="service-item magnetic" data-aos="fade-right">
+            <div class="service-card-inner">
+                <div class="service-icon">
+                    <i class="fas fa-leaf fa-3x"></i>
+                    <h3>Lawn Care</h3>
+                </div>
+                <div class="service-hover">
+                    <ul>
+                        <li><span class="progress" style="width:95%"></span>Weekly Mowing</li>
+                        <li><span class="progress" style="width:90%"></span>Fertilization</li>
+                        <li><span class="progress" style="width:85%"></span>Aeration</li>
+                        <li><span class="progress" style="width:92%"></span>Weed Control</li>
+                    </ul>
+                </div>
             </div>
-            <h3>Lawn Care</h3>
-            <p>Keep your lawn lush, healthy, and vibrant year-round with our comprehensive care services.</p>
-            <ul>
-                <li>Regular mowing and edging</li>
-                <li>Fertilization and weed control</li>
-                <li>Aeration and overseeding</li>
-                <li>Disease management</li>
-            </ul>
         </div>
-        <div class="service-item">
-            <div class="service-icon">
-                <i class="fas fa-seedling"></i>
+        
+        <!-- Garden Design -->
+        <div class="service-item magnetic" data-aos="fade-left">
+            <div class="service-card-inner">
+                <div class="service-icon">
+                    <i class="fas fa-seedling fa-3x"></i>
+                    <h3>Garden Design</h3>
+                </div>
+                <div class="service-hover">
+                    <ul>
+                        <li><span class="progress" style="width:97%"></span>Custom Designs</li>
+                        <li><span class="progress" style="width:94%"></span>Plant Selection</li>
+                        <li><span class="progress" style="width:92%"></span>Installation</li>
+                        <li><span class="progress" style="width:88%"></span>Seasonal Updates</li>
+                    </ul>
+                </div>
             </div>
-            <h3>Garden Design</h3>
-            <p>Transform your outdoor space with custom garden designs that reflect your style and personality.</p>
-            <ul>
-                <li>Flower bed design and installation</li>
-                <li>Native plant landscaping</li>
-                <li>Vegetable and herb gardens</li>
-                <li>Water features and rock gardens</li>
-            </ul>
         </div>
-        <div class="service-item">
-            <div class="service-icon">
-                <i class="fas fa-mountain"></i>
+
+        <!-- Hardscaping -->
+        <div class="service-item magnetic" data-aos="fade-right">
+            <div class="service-card-inner">
+                <div class="service-icon">
+                    <i class="fas fa-mountain fa-3x"></i>
+                    <h3>Hardscaping</h3>
+                </div>
+                <div class="service-hover">
+                    <ul>
+                        <li><span class="progress" style="width:96%"></span>Patios & Walkways</li>
+                        <li><span class="progress" style="width:93%"></span>Retaining Walls</li>
+                        <li><span class="progress" style="width:89%"></span>Water Features</li>
+                        <li><span class="progress" style="width:91%"></span>Outdoor Kitchens</li>
+                    </ul>
+                </div>
             </div>
-            <h3>Hardscaping</h3>
-            <p>Enhance your outdoor living areas with beautiful and functional hardscape features.</p>
-            <ul>
-                <li>Patio and walkway installation</li>
-                <li>Retaining walls and stone work</li>
-                <li>Outdoor kitchens and fireplaces</li>
-                <li>Pergolas and gazebos</li>
-            </ul>
         </div>
-        <div class="service-item">
-            <div class="service-icon">
-                <i class="fas fa-tint"></i>
+
+        <!-- Irrigation Systems -->
+        <div class="service-item magnetic" data-aos="fade-left">
+            <div class="service-card-inner">
+                <div class="service-icon">
+                    <i class="fas fa-tint fa-3x"></i>
+                    <h3>Irrigation Systems</h3>
+                </div>
+                <div class="service-hover">
+                    <ul>
+                        <li><span class="progress" style="width:98%"></span>System Design</li>
+                        <li><span class="progress" style="width:94%"></span>Installation</li>
+                        <li><span class="progress" style="width:96%"></span>Maintenance</li>
+                        <li><span class="progress" style="width:90%"></span>Smart Controllers</li>
+                    </ul>
+                </div>
             </div>
-            <h3>Irrigation Systems</h3>
-            <p>Ensure your landscape stays healthy and vibrant with efficient watering solutions.</p>
-            <ul>
-                <li>Custom irrigation system design</li>
-                <li>Sprinkler installation and repair</li>
-                <li>Drip irrigation for gardens</li>
-                <li>Smart controller integration</li>
-            </ul>
-        </div>
-        <div class="service-item">
-            <div class="service-icon">
-                <i class="fas fa-tree"></i>
-            </div>
-            <h3>Tree Service</h3>
-            <p>Maintain the health, safety, and beauty of your trees with our expert arborist services.</p>
-            <ul>
-                <li>Tree trimming and pruning</li>
-                <li>Tree removal and stump grinding</li>
-                <li>Disease diagnosis and treatment</li>
-                <li>Tree planting and transplanting</li>
-            </ul>
         </div>
     </section>
 
-    <section class="cta-section">
+    <!-- Call to Action -->
+    <section class="cta-section" data-aos="zoom-in">
         <h2>Ready to Transform Your Outdoor Space?</h2>
-        <p>Contact us today for a free consultation and quote.</p>
-        <a href="{{ url_for('contact') }}" class="cta-button">Get Started</a>
+        <p>Our team is prepared to bring your landscaping vision to life. Contact us today for a free consultation and estimate.</p>
+        <a href="{{ url_for('contact') }}" class="cta-button magnetic">Get Started</a>
     </section>
 </main>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Flip cards on hover
+    const cards = document.querySelectorAll('.service-card-inner');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'rotateY(180deg)';
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'rotateY(0deg)';
+        });
+    });
+});
+</script>
 {% endblock %}
