@@ -215,3 +215,116 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Services Page Styles */
+.services-header {
+  background-image: url("../images/services-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.header-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.services-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.services-header p {
+  font-size: 1.2rem;
+}
+
+.service-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.service-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #4caf50;
+  margin-bottom: 1rem;
+}
+
+.service-item h3 {
+  color: #2c5e1a;
+  margin-bottom: 1rem;
+}
+
+.service-item p {
+  margin-bottom: 1rem;
+}
+
+.service-item ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.service-item ul li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.service-item ul li::before {
+  content: "\2022";
+  color: #4caf50;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.cta-section {
+  background-color: #e9f5e9;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 10px;
+  margin-top: 3rem;
+}
+
+.cta-section h2 {
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .services-header h1 {
+    font-size: 2rem;
+  }
+
+  .service-item {
+    padding: 1.5rem;
+  }
+}

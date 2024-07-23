@@ -1,37 +1,91 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<header class="page-header">
-    <h1>Our Services</h1>
+<header class="page-header services-header">
+    <div class="header-content">
+        <h1>Our Services</h1>
+        <p>Transforming outdoor spaces with expertise and passion</p>
+    </div>
 </header>
 
 <main class="services-page">
+    <section class="service-intro">
+        <h2>Comprehensive Landscaping Solutions</h2>
+        <p>At Green Edge Landscaping, we offer a wide range of services to meet all your outdoor needs. Our team of experienced professionals is dedicated to creating and maintaining beautiful, functional landscapes that enhance your property's value and your quality of life.</p>
+    </section>
+
     <section class="service-list">
         <div class="service-item">
-            <img src="{{ url_for('static', filename='images/lawn-care.jpg') }}" alt="Lawn Care">
-            <h2>Lawn Care</h2>
-            <p>Our comprehensive lawn care services include mowing, fertilization, aeration, and weed control to keep your lawn looking its best.</p>
+            <div class="service-icon">
+                <i class="fas fa-leaf"></i>
+            </div>
+            <h3>Lawn Care</h3>
+            <p>Keep your lawn lush, healthy, and vibrant year-round with our comprehensive care services.</p>
+            <ul>
+                <li>Regular mowing and edging</li>
+                <li>Fertilization and weed control</li>
+                <li>Aeration and overseeding</li>
+                <li>Disease management</li>
+            </ul>
         </div>
         <div class="service-item">
-            <img src="{{ url_for('static', filename='images/garden-design.jpg') }}" alt="Garden Design">
-            <h2>Garden Design</h2>
-            <p>From colorful flower beds to vegetable gardens, we create custom garden designs that reflect your personal style and complement your home.</p>
+            <div class="service-icon">
+                <i class="fas fa-seedling"></i>
+            </div>
+            <h3>Garden Design</h3>
+            <p>Transform your outdoor space with custom garden designs that reflect your style and personality.</p>
+            <ul>
+                <li>Flower bed design and installation</li>
+                <li>Native plant landscaping</li>
+                <li>Vegetable and herb gardens</li>
+                <li>Water features and rock gardens</li>
+            </ul>
         </div>
         <div class="service-item">
-            <img src="{{ url_for('static', filename='images/hardscaping.jpg') }}" alt="Hardscaping">
-            <h2>Hardscaping</h2>
-            <p>Enhance your outdoor living space with beautiful patios, walkways, retaining walls, and other hardscape features.</p>
+            <div class="service-icon">
+                <i class="fas fa-mountain"></i>
+            </div>
+            <h3>Hardscaping</h3>
+            <p>Enhance your outdoor living areas with beautiful and functional hardscape features.</p>
+            <ul>
+                <li>Patio and walkway installation</li>
+                <li>Retaining walls and stone work</li>
+                <li>Outdoor kitchens and fireplaces</li>
+                <li>Pergolas and gazebos</li>
+            </ul>
         </div>
         <div class="service-item">
-            <img src="{{ url_for('static', filename='images/irrigation.jpg') }}" alt="Irrigation Systems">
-            <h2>Irrigation Systems</h2>
-            <p>We design and install efficient irrigation systems to keep your landscape properly watered and healthy.</p>
+            <div class="service-icon">
+                <i class="fas fa-tint"></i>
+            </div>
+            <h3>Irrigation Systems</h3>
+            <p>Ensure your landscape stays healthy and vibrant with efficient watering solutions.</p>
+            <ul>
+                <li>Custom irrigation system design</li>
+                <li>Sprinkler installation and repair</li>
+                <li>Drip irrigation for gardens</li>
+                <li>Smart controller integration</li>
+            </ul>
         </div>
         <div class="service-item">
-            <img src="{{ url_for('static', filename='images/tree-service.jpg') }}" alt="Tree Service">
-            <h2>Tree Service</h2>
-            <p>Our expert arborists provide tree trimming, removal, and health care services to maintain the beauty and safety of your property.</p>
+            <div class="service-icon">
+                <i class="fas fa-tree"></i>
+            </div>
+            <h3>Tree Service</h3>
+            <p>Maintain the health, safety, and beauty of your trees with our expert arborist services.</p>
+            <ul>
+                <li>Tree trimming and pruning</li>
+                <li>Tree removal and stump grinding</li>
+                <li>Disease diagnosis and treatment</li>
+                <li>Tree planting and transplanting</li>
+            </ul>
         </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Transform Your Outdoor Space?</h2>
+        <p>Contact us today for a free consultation and quote.</p>
+        <a href="{{ url_for('contact') }}" class="cta-button">Get Started</a>
     </section>
 </main>
 {% endblock %}
