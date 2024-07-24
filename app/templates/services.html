@@ -4,7 +4,7 @@
 
 {% block content %}
 <!-- Services Hero -->
-<header class="services-header">
+<header class="hero services-header">
     <div class="hero-content" data-aos="fade-up">
         <h1>Professional Landscaping Services</h1>
         <p>Transform your outdoor space with our expert solutions</p>
@@ -52,7 +52,7 @@
                             </div>
                         </li>
                     </ul>
-                    <a href="{{ url_for('contact') }}" class="card-btn">Request Service</a>
+                    <a href="{{ url_for('lawn_care') }}" class="card-btn">Learn More</a>
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@
                             </div>
                         </li>
                     </ul>
-                    <a href="{{ url_for('contact') }}" class="card-btn">Request Design</a>
+                    <a href="{{ url_for('garden_design') }}" class="card-btn">Learn More</a>
                 </div>
             </div>
         </div>
@@ -126,7 +126,7 @@
                             </div>
                         </li>
                     </ul>
-                    <a href="{{ url_for('contact') }}" class="card-btn">Request Quote</a>
+                    <a href="{{ url_for('hardscaping') }}" class="card-btn">Learn More</a>
                 </div>
             </div>
         </div>
@@ -163,19 +163,19 @@
                             </div>
                         </li>
                     </ul>
-                    <a href="{{ url_for('contact') }}" class="card-btn">Learn More</a>
+                    <a href="{{ url_for('irrigation_systems') }}" class="card-btn">Learn More</a>
                 </div>
             </div>
         </div>
 
-        <!-- Tree Care -->
+        <!-- Tree Services -->
         <div class="service-item magnetic" data-aos="fade-up" data-aos-delay="400">
             <div class="service-card-inner">
                 <div class="service-front">
                     <div class="service-icon">
                         <i class="fas fa-tree fa-3x"></i>
                     </div>
-                    <h3>Tree Care</h3>
+                    <h3>Tree Services</h3>
                     <p>Expert care for the health and beauty of your trees.</p>
                 </div>
                 <div class="service-back">
@@ -200,44 +200,7 @@
                             </div>
                         </li>
                     </ul>
-                    <a href="{{ url_for('contact') }}" class="card-btn">Schedule Service</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Seasonal Maintenance -->
-        <div class="service-item magnetic" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-card-inner">
-                <div class="service-front">
-                    <div class="service-icon">
-                        <i class="fas fa-calendar-alt fa-3x"></i>
-                    </div>
-                    <h3>Seasonal Maintenance</h3>
-                    <p>Year-round care to keep your landscape pristine.</p>
-                </div>
-                <div class="service-back">
-                    <h4>Our Seasonal Services:</h4>
-                    <ul>
-                        <li>
-                            <span class="feature">Spring Cleanup</span>
-                            <div class="progress-bar">
-                                <div class="progress" style="width:96%"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feature">Fall Leaf Removal</span>
-                            <div class="progress-bar">
-                                <div class="progress" style="width:98%"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feature">Winter Preparation</span>
-                            <div class="progress-bar">
-                                <div class="progress" style="width:94%"></div>
-                            </div>
-                        </li>
-                    </ul>
-                    <a href="{{ url_for('contact') }}" class="card-btn">Get Started</a>
+                    <a href="{{ url_for('tree_services') }}" class="card-btn">Learn More</a>
                 </div>
             </div>
         </div>
