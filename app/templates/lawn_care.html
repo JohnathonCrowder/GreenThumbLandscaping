@@ -20,6 +20,7 @@
 
     <section class="service-highlights" data-aos="fade-up">
         <div class="container">
+            <h2>Our Lawn Care Services</h2>
             <div class="highlight-grid">
                 <div class="highlight-item">
                     <i class="fas fa-cut"></i>
@@ -40,6 +41,16 @@
                     <i class="fas fa-tint"></i>
                     <h3>Irrigation Management</h3>
                     <p>Efficient watering strategies to ensure your lawn receives the right amount of hydration.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Aeration & Overseeding</h3>
+                    <p>Improve soil health and grass density through strategic aeration and overseeding techniques.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-recycle"></i>
+                    <h3>Eco-Friendly Practices</h3>
+                    <p>Sustainable lawn care methods that protect the environment while beautifying your property.</p>
                 </div>
             </div>
         </div>
@@ -74,7 +85,7 @@
     </section>
 
     <section class="service-cta" data-aos="zoom-in">
-        <div class="container">
+        <div class="container text-center">
             <h2>Ready for a Lush, Healthy Lawn?</h2>
             <p>Contact us today to schedule a free lawn assessment and consultation.</p>
             <a href="{{ url_for('contact') }}" class="cta-button">Get Your Free Quote</a>
@@ -101,6 +112,14 @@
                     <h3>Do you use eco-friendly products?</h3>
                     <p>Yes, we prioritize the use of environmentally friendly products and practices in all our lawn care services to protect both your lawn and the environment.</p>
                 </div>
+                <div class="faq-item">
+                    <h3>How often should I water my lawn?</h3>
+                    <p>Watering frequency depends on various factors including climate, grass type, and soil conditions. Generally, deep, infrequent watering (1-2 times per week) is better than frequent, shallow watering.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can you help with lawn pest infestations?</h3>
+                    <p>Absolutely. We offer comprehensive pest control services to identify and treat various lawn pests, using methods that are effective and safe for your family and pets.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -115,7 +134,7 @@
     
     .highlight-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
     
@@ -174,9 +193,13 @@
         margin: 0 auto 1rem;
     }
     
+    .service-cta .container {
+        text-align: center;
+    }
+    
     .faq-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
         margin-top: 2rem;
     }
@@ -192,6 +215,12 @@
         color: #2c5e1a;
     }
     
+    @media (max-width: 992px) {
+        .highlight-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
     @media (max-width: 768px) {
         .process-steps {
             flex-direction: column;
@@ -204,6 +233,16 @@
             left: 50%;
             width: 2px;
             height: 60px;
+        }
+        
+        .faq-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .highlight-grid {
+            grid-template-columns: 1fr;
         }
     }
 </style>
