@@ -121,7 +121,6 @@ nav ul li a:hover {
   background-position: center;
   background-attachment: fixed;
   height: 100vh;
-  width: 100vw; /* Add this line */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,6 +201,7 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 2rem;
+  overflow-x: hidden; /* Add this line to prevent horizontal scrolling */
 }
 
 /* Sections */
@@ -218,7 +218,7 @@ h2 {
 
 /* Services Page Styles */
 .services-header {
-  background-image: url("../images/hero-bg.jpg"); /* Change this line */
+  background-image: url("../images/hero-bg.jpg");
   background-size: cover;
   background-position: center;
   height: 50vh;
@@ -776,4 +776,13 @@ footer {
 }
 .mt-4 {
   margin-top: 2rem;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
