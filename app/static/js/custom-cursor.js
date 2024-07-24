@@ -36,6 +36,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     updatePosition();
 
+    // Ensure cursor is visible when entering/leaving the window
+    document.addEventListener('mouseenter', () => {
+        cursor.style.opacity = '1';
+        cursorDot.style.opacity = '1';
+    });
+
+    document.addEventListener('mouseleave', () => {
+        cursor.style.opacity = '0';
+        cursorDot.style.opacity = '0';
+    });
+
     // Magnetic effect for elements with 'magnetic' class
     const magneticElements = document.querySelectorAll('.magnetic');
     magneticElements.forEach(elem => {
