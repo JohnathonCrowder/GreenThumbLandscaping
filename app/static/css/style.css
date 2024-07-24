@@ -1,15 +1,20 @@
 /* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html,
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
 }
 
 /* Typography */
@@ -21,6 +26,20 @@ h5,
 h6 {
   font-family: "Playfair Display", serif;
   font-weight: 700;
+}
+
+/* Layout */
+main {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+main > *:not(.hero):not(.services-header) {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
 }
 
 /* Custom Cursor */
@@ -133,7 +152,12 @@ nav ul li a:hover {
   position: relative;
 }
 
-.hero::before {
+.services-header {
+  height: 50vh;
+}
+
+.hero::before,
+.services-header::before {
   content: "";
   position: absolute;
   top: 0;
@@ -200,20 +224,6 @@ nav ul li a:hover {
   box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
 }
 
-/* Main content */
-main {
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-main > *:not(.hero):not(.services-header) {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-}
-
 /* Sections */
 section {
   margin-bottom: 4rem;
@@ -227,39 +237,6 @@ h2 {
 }
 
 /* Services Page Styles */
-
-.services-header {
-  height: 50vh;
-}
-.services-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.header-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  padding: 2rem;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.services-header h1 {
-  font-size: 3.5rem;
-  margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.services-header p {
-  font-size: 1.2rem;
-}
-
 .service-intro {
   text-align: center;
   max-width: 800px;
@@ -777,13 +754,4 @@ footer {
 }
 .mt-4 {
   margin-top: 2rem;
-}
-
-.full-width {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
 }
