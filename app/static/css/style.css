@@ -121,6 +121,7 @@ nav ul li a:hover {
   background-position: center;
   background-attachment: fixed;
   height: 100vh;
+  width: 100vw; /* Add this line */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -217,7 +218,7 @@ h2 {
 
 /* Services Page Styles */
 .services-header {
-  background-image: url("../images/services-hero.jpg");
+  background-image: url("../images/hero-bg.jpg"); /* Change this line */
   background-size: cover;
   background-position: center;
   height: 50vh;
