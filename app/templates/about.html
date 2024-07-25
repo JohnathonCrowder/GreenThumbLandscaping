@@ -1,0 +1,294 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - Green Edge Landscaping{% endblock %}
+
+{% block content %}
+<header class="hero about-hero">
+    <div class="hero-content" data-aos="fade-up">
+        <h1>About Green Edge Landscaping</h1>
+        <p>Transforming outdoor spaces with passion and expertise since 2005</p>
+    </div>
+</header>
+
+<main class="about-page">
+    <section class="our-story" data-aos="fade-up">
+        <div class="container">
+            <h2>Our Story</h2>
+            <div class="story-content">
+                <img src="{{ url_for('static', filename='images/founders.jpg') }}" alt="Green Edge Landscaping Founders" class="story-image">
+                <div class="story-text">
+                    <p>Green Edge Landscaping was founded in 2005 by married couple John and Emma Brooks, who shared a lifelong passion for gardening and environmental stewardship. Their journey began when they purchased their first home and transformed its neglected backyard into a thriving garden oasis, drawing admiration from neighbors and friends alike.</p>
+                    <p>Inspired by their success and driven by a desire to help others create beautiful, sustainable outdoor spaces, John and Emma decided to turn their passion into a business. What started as a small, local lawn care service has grown into a full-service landscaping company, serving residential and commercial clients throughout the greater Philadelphia area.</p>
+                    <p>Today, Green Edge Landscaping is proud to be a leader in innovative, eco-friendly landscaping solutions. John's background in horticulture and Emma's expertise in sustainable design have been the cornerstone of our approach. As we continue to grow and evolve, we remain true to our roots and our commitment to creating beautiful, environmentally responsible outdoor environments for our clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-mission" data-aos="fade-up">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>At Green Edge Landscaping, our mission is to enhance the beauty and functionality of outdoor spaces while promoting environmental responsibility. We strive to:</p>
+            <ul>
+                <li>Create stunning, sustainable landscapes that reflect our clients' unique styles and needs</li>
+                <li>Implement eco-friendly practices and materials in all our projects</li>
+                <li>Educate our clients and community about the importance of environmental stewardship</li>
+                <li>Provide exceptional customer service and build lasting relationships with our clients</li>
+                <li>Foster a positive, growth-oriented work environment for our team members</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="our-team" data-aos="fade-up">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='images/john-brooks.jpg') }}" alt="John Brooks">
+                    <h3>John Brooks</h3>
+                    <p>Co-Founder & CEO</p>
+                </div>
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='images/emma-brooks.jpg') }}" alt="Emma Brooks">
+                    <h3>Emma Brooks</h3>
+                    <p>Co-Founder & Chief Design Officer</p>
+                </div>
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='images/emily-chen.jpg') }}" alt="Emily Chen">
+                    <h3>Emily Chen</h3>
+                    <p>Lead Landscape Designer</p>
+                </div>
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='images/david-rodriguez.jpg') }}" alt="David Rodriguez">
+                    <h3>David Rodriguez</h3>
+                    <p>Head of Horticulture</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-values" data-aos="fade-up">
+        <div class="container">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Sustainability</h3>
+                    <p>We prioritize eco-friendly practices and materials in all our projects.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Integrity</h3>
+                    <p>We conduct our business with honesty, transparency, and ethical practices.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-star"></i>
+                    <h3>Excellence</h3>
+                    <p>We strive for the highest quality in our work and customer service.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Community</h3>
+                    <p>We are committed to giving back and fostering strong community relationships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-achievements" data-aos="fade-up">
+        <div class="container">
+            <h2>Our Achievements</h2>
+            <ul class="achievement-list">
+                <li>2022 - Philadelphia Horticultural Society "Green Company of the Year" Award</li>
+                <li>2020 - Certified B Corporation Status</li>
+                <li>2018 - EPA WaterSense® Partner of the Year</li>
+                <li>2015 - Pennsylvania Landscape & Nursery Association "Best Residential Landscape Design" Award</li>
+                <li>2010 - Local Business Journal "Fast 50" Growing Companies</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="cta-section" data-aos="zoom-in">
+        <div class="container text-center">
+            <h2>Ready to Transform Your Outdoor Space?</h2>
+            <p>Let's work together to bring your landscaping vision to life.</p>
+            <a href="{{ url_for('contact') }}" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .about-hero {
+        background-image: url("{{ url_for('static', filename='images/about-hero.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        position: relative;
+    }
+
+    .about-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 2rem;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.6);
+        animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-page section {
+        padding: 4rem 0;
+    }
+
+    .story-content {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .story-image {
+        width: 40%;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .story-text {
+        flex: 1;
+    }
+
+    .our-mission ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .our-mission li {
+        padding-left: 1.5rem;
+        position: relative;
+        margin-bottom: 1rem;
+    }
+
+    .our-mission li::before {
+        content: "\f058";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        color: #4caf50;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+    }
+
+    .team-member {
+        text-align: center;
+    }
+
+    .team-member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: 3px solid #4caf50;
+    }
+
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+    }
+
+    .value-item {
+        text-align: center;
+        padding: 2rem;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .value-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .value-item i {
+        font-size: 3rem;
+        color: #4caf50;
+        margin-bottom: 1rem;
+    }
+
+    .achievement-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .achievement-list li {
+        padding-left: 1.5rem;
+        position: relative;
+        margin-bottom: 1rem;
+    }
+
+    .achievement-list li::before {
+        content: "\f091";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        color: #4caf50;
+    }
+
+    @media (max-width: 768px) {
+        .story-content {
+            flex-direction: column;
+        }
+
+        .story-image {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+</style>
+{% endblock %}

@@ -1,20 +1,297 @@
 {% extends "base.html" %}
 
+{% block title %}Hardscaping Services - Green Edge Landscaping{% endblock %}
+
 {% block content %}
-<header class="page-header services-header">
-    <div class="header-content" data-aos="fade-up">
-        <h1>[Service Name] Services</h1>
-        <p>Expert [Service Name] solutions for your landscape</p>
+<header class="hero service-hero">
+    <div class="hero-content" data-aos="fade-up">
+        <h1>Expert Hardscaping Services</h1>
+        <p>Transform your outdoor space with durable and beautiful hardscape elements</p>
     </div>
 </header>
 
-<main class="service-page">
+<main class="service-page hardscaping-page">
     <section class="service-intro" data-aos="fade-up">
-        <h2>[Service Name]</h2>
-        <p>[Brief description of the service]</p>
+        <div class="container">
+            <h2>Elevate Your Outdoor Living</h2>
+            <p>At Green Edge Landscaping, we specialize in creating stunning hardscape features that enhance the functionality and aesthetic appeal of your outdoor space. Our expert hardscaping services combine innovative design with high-quality materials to create durable, low-maintenance, and visually striking elements that seamlessly integrate with your landscape.</p>
+        </div>
     </section>
 
-    <!-- Add more sections as needed -->
+    <section class="service-highlights" data-aos="fade-up">
+        <div class="container">
+            <h2>Our Hardscaping Services</h2>
+            <div class="highlight-grid">
+                <div class="highlight-item">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <h3>Patios & Decks</h3>
+                    <p>Custom-designed outdoor living spaces for relaxation and entertainment.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-road"></i>
+                    <h3>Walkways & Driveways</h3>
+                    <p>Functional and attractive pathways using various materials and patterns.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-mountain"></i>
+                    <h3>Retaining Walls</h3>
+                    <p>Structural solutions that add visual interest and manage landscape elevation.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-fire"></i>
+                    <h3>Fire Pits & Outdoor Fireplaces</h3>
+                    <p>Cozy additions to extend your outdoor enjoyment throughout the seasons.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Outdoor Kitchens</h3>
+                    <p>Fully-equipped cooking and dining areas for the ultimate outdoor experience.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-water"></i>
+                    <h3>Water Features</h3>
+                    <p>Custom fountains, ponds, and waterfalls to add tranquility to your landscape.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="service-process" data-aos="fade-up">
+        <div class="container">
+            <h2>Our Hardscaping Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Consultation</h3>
+                    <p>We discuss your vision, needs, and budget to understand your project goals.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Design</h3>
+                    <p>Our experts create a custom hardscape design tailored to your space and preferences.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Material Selection</h3>
+                    <p>We help you choose the best materials for durability, aesthetics, and functionality.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Installation</h3>
+                    <p>Our skilled team brings the design to life with precision and attention to detail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-cta" data-aos="zoom-in">
+        <div class="container text-center">
+            <h2>Ready to Transform Your Outdoor Space?</h2>
+            <p>Contact us today to schedule a free consultation and start your hardscaping project.</p>
+            <a href="{{ url_for('contact') }}" class="cta-button">Get Your Free Consultation</a>
+        </div>
+    </section>
+
+    <section class="faq" data-aos="fade-up">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How long does a typical hardscaping project take?</h3>
+                    <p>Project duration varies depending on the scope and complexity, but most projects are completed within 2-6 weeks from design approval to final installation.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What materials do you use for hardscaping?</h3>
+                    <p>We use a variety of high-quality materials including natural stone, pavers, concrete, and brick. We'll help you choose the best options for your project and budget.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can hardscaping help with drainage issues?</h3>
+                    <p>Yes, proper hardscape design and installation can significantly improve drainage in your outdoor space, preventing water accumulation and potential damage.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer eco-friendly hardscaping options?</h3>
+                    <p>Absolutely! We offer permeable paving options and use sustainable materials when possible to minimize environmental impact.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I maintain my new hardscape features?</h3>
+                    <p>Most hardscape elements are low-maintenance. We provide care instructions and offer maintenance services to keep your hardscaping looking great for years to come.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can you integrate hardscaping with existing landscaping?</h3>
+                    <p>Yes, we specialize in creating seamless transitions between hardscape elements and your existing landscape, ensuring a cohesive and beautiful outdoor space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .service-hero {
+        background-image: url("{{ url_for('static', filename='images/hardscaping-hero.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        position: relative;
+    }
+
+    .service-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 2rem;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.6);
+        animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .highlight-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .highlight-item {
+        text-align: center;
+        padding: 2rem;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .highlight-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .highlight-item i {
+        font-size: 3rem;
+        color: #4caf50;
+        margin-bottom: 1rem;
+    }
+    
+    .process-steps {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+    
+    .step {
+        flex: 1;
+        text-align: center;
+        padding: 0 1rem;
+        position: relative;
+    }
+    
+    .step:not(:last-child):after {
+        content: '';
+        position: absolute;
+        top: 30px;
+        right: -30%;
+        width: 60%;
+        height: 2px;
+        background-color: #4caf50;
+    }
+    
+    .step-number {
+        width: 60px;
+        height: 60px;
+        background-color: #4caf50;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        margin: 0 auto 1rem;
+    }
+    
+    .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .faq-item {
+        background-color: #f9f9f9;
+        padding: 1.5rem;
+        border-radius: 10px;
+    }
+    
+    .faq-item h3 {
+        margin-bottom: 0.5rem;
+        color: #2c5e1a;
+    }
+    
+    @media (max-width: 992px) {
+        .highlight-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .process-steps {
+            flex-direction: column;
+        }
+        
+        .step:not(:last-child):after {
+            top: auto;
+            bottom: -30px;
+            right: auto;
+            left: 50%;
+            width: 2px;
+            height: 60px;
+        }
+        
+        .faq-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .highlight-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
 {% endblock %}

@@ -32,3 +32,12 @@ def tree_services():
 @app.route('/contact')
 def contact():
     return render_template('contact.html', title='Contact Us')
+
+@app.route('/about')
+def about():
+    return render_template('about.html', title='About Us')
+
+
+@app.route('/portfolio')
+def portfolio():
+    return render_template('portfolio.html', title='Our Portfolio')
