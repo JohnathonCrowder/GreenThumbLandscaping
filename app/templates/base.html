@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!-- Add your favicon here -->
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
     <!-- AOS CSS -->
@@ -108,6 +112,14 @@
             once: true,
         });
     </script>
+  <!-- Scripts -->
+    <!-- jQuery (required for Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Slick Carousel JavaScript -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <!-- Your custom scripts -->
     <script src="{{ url_for('static', filename='js/custom-cursor.js') }}"></script>
     <script src="{{ url_for('static', filename='js/micro-interactions.js') }}"></script>
     <script>
