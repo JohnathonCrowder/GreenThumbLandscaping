@@ -44,29 +44,41 @@
             <h2>Our Services</h2>
             <p>Discover how we can enhance your outdoor living experience:</p>
             <div class="services-grid">
-                <div class="service-card" data-aos="flip-left">
+                <a href="{{ url_for('lawn_care') }}" class="service-card" data-aos="flip-left">
                     <img src="{{ url_for('static', filename='images/lawn-care.jpg') }}" alt="Lawn Care">
-                    <h3>Lawn Care</h3>
-                    <p>Keep your lawn lush and healthy year-round with our expert maintenance.</p>
-                </div>
-                <div class="service-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-content">
+                        <h3>Lawn Care</h3>
+                        <p>Keep your lawn lush and healthy year-round with our expert maintenance.</p>
+                    </div>
+                </a>
+                
+                <a href="{{ url_for('garden_design') }}" class="service-card" data-aos="flip-left" data-aos-delay="100">
                     <img src="{{ url_for('static', filename='images/garden-design.jpg') }}" alt="Garden Design">
-                    <h3>Garden Design</h3>
-                    <p>Transform your space with custom garden designs tailored to your style.</p>
-                </div>
-                <div class="service-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-content">
+                        <h3>Garden Design</h3>
+                        <p>Transform your space with custom garden designs tailored to your style.</p>
+                    </div>
+                </a>
+                
+                <a href="{{ url_for('hardscaping') }}" class="service-card" data-aos="flip-left" data-aos-delay="200">
                     <img src="{{ url_for('static', filename='images/hardscaping.jpg') }}" alt="Hardscaping">
-                    <h3>Hardscaping</h3>
-                    <p>Elevate your outdoor living with beautiful patios, walkways, and more.</p>
-                </div>
-                <div class="service-card" data-aos="flip-left" data-aos-delay="300">
-                    <img src="{{ url_for('static', filename='images/irrigation-systems.jpg') }}" alt="Irrigation Systems">
-                    <h3>Irrigation Systems</h3>
-                    <p>Efficient watering solutions to keep your landscape hydrated and healthy.</p>
-                </div>
+                    <div class="card-content">
+                        <h3>Hardscaping</h3>
+                        <p>Elevate your outdoor living with beautiful patios, walkways, and more.</p>
+                    </div>
+                </a>
+                
+                <a href="{{ url_for('irrigation_systems') }}" class="service-card" data-aos="flip-left" data-aos-delay="300">
+                    <img src="{{ url_for('static', filename='images/irrigation-systems.jpg') }}" alt="Irrigation Systems" loading="lazy">
+                    <div class="card-content">
+                        <h3>Irrigation Systems</h3>
+                        <p>Intelligent watering solutions for a thriving and sustainable landscape.</p>
+                    </div>
+                </a>
             </div>
-            <a href="{{ url_for('services') }}" class="button magnetic">View All Services</a>
-        </div>
+            <div class="text-center">
+                <a href="{{ url_for('services') }}" class="button magnetic">View All Services</a>
+             </div>
     </section>
 
     <!-- Recent Projects -->
@@ -224,6 +236,41 @@
     .project-info p {
         font-size: 1rem;
     }
+
+    a.service-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;  /* Makes full card clickable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);  /* Gives a "lift" on hover */
+}
+
+.card-content {
+    padding: 1rem;  /* Adds some spacing inside cards */
+}
+
+.button.magnetic {
+   background-color: #4CAF50;  /* Your brand green color */
+   color: white;
+   padding: 12px 30px;  /* Larger clickable area */
+   border-radius: 50px;  /* Very rounded edges, modern aesthetic */
+   text-transform: uppercase;  /* Makes it feel more like a strong CTA */
+   letter-spacing: 1px;  /* gives a little breathing room between letters */
+   font-weight: 600;  /* Makes it a little bolder */
+   box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);  /* Gives a subtle 'lifted' effect */
+   transition: all 0.3s ease;  /* Smooth transition for hover effects */
+}
+
+.button.magnetic:hover {
+   background-color: #45a049;  /* Slightly darker on hover */
+   box-shadow: 0 6px 12px rgba(76, 175, 80, 0.5);  /* Bigger shadow on hover, feels interactive! */
+   transform: translateY(-2px);  /* Slight lift on hover */
+}
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
