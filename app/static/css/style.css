@@ -82,7 +82,7 @@ main > *:not(.hero):not(.services-header) {
 
 /* Navigation */
 nav {
-  background-color: rgba(44, 94, 26, 0.95); /* Dark green background */
+  background-color: rgba(44, 94, 26, 0.637); /* Dark green background */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 0;
   position: fixed;
