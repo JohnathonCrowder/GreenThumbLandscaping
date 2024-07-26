@@ -41,3 +41,7 @@ def about():
 @app.route('/portfolio')
 def portfolio():
     return render_template('portfolio.html', title='Our Portfolio')
+
+@app.route('/services/landscaping-maintenance')
+def landscaping_maintenance():
+    return render_template('landscaping_maintenance.html', title='Landscaping Maintenance')

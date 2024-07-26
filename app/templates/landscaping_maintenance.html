@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Landscaping Maintenance - Green Edge Landscaping{% endblock %}
+
+{% block content %}
+<header class="hero service-hero">
+    <div class="hero-content" data-aos="fade-up">
+        <h1>Professional Landscaping Maintenance</h1>
+        <p>Keep your outdoor space beautiful and healthy year-round</p>
+    </div>
+</header>
+
+<main class="service-page landscaping-maintenance-page">
+    <section class="service-intro" data-aos="fade-up">
+        <div class="container">
+            <h2>Comprehensive Landscaping Maintenance</h2>
+            <p>At Green Edge Landscaping, we understand that a beautiful landscape requires ongoing care and attention. Our comprehensive landscaping maintenance services are designed to keep your outdoor space looking its best throughout the year, ensuring that your investment continues to thrive and enhance your property's curb appeal.</p>
+        </div>
+    </section>
+
+    <section class="service-highlights" data-aos="fade-up">
+        <div class="container">
+            <h2>Our Maintenance Services</h2>
+            <div class="highlight-grid">
+                <div class="highlight-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Regular Maintenance</h3>
+                    <p>Scheduled maintenance to keep your landscape tidy and healthy.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-snowflake"></i>
+                    <h3>Seasonal Services</h3>
+                    <p>Specialized care tailored to your landscape's needs each season.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Mulching</h3>
+                    <p>Mulch application to conserve moisture and improve plant health.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-water"></i>
+                    <h3>Irrigation Management</h3>
+                    <p>Efficient watering solutions to maintain your landscape's health.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-flask"></i>
+                    <h3>Soil Testing</h3>
+                    <p>Regular soil analysis to ensure optimal growing conditions.</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Enhancement Services</h3>
+                    <p>Periodic updates and additions to keep your landscape fresh and vibrant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add more sections like "Our Maintenance Process", "FAQs", and "Call-to-Action" similar to the other service pages -->
+
+</main>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .service-hero {
+        background-image: url("{{ url_for('static', filename='images/landscaping-maintenance-hero.jpg') }}");
+    }
+    
+    /* Add more styles as needed, similar to the other service pages */
+</style>
+{% endblock %}
