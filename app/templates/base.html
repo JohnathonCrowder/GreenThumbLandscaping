@@ -38,14 +38,26 @@
                     <li><a href="{{ url_for('index') }}" class="nav-link">Home</a></li>
                     <li class="dropdown">
                         <a href="{{ url_for('services') }}" class="nav-link">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ url_for('lawn_care') }}">Lawn Care</a></li>
-                            <li><a href="{{ url_for('garden_design') }}">Garden Design</a></li>
-                            <li><a href="{{ url_for('hardscaping') }}">Hardscaping</a></li>
-                            <li><a href="{{ url_for('irrigation_systems') }}">Irrigation Systems</a></li>
-                            <li><a href="{{ url_for('tree_services') }}">Tree Services</a></li>
-                            <li><a href="{{ url_for('landscaping_maintenance') }}">Landscaping Maintenance</a></li>
-                        </ul>
+                        <div class="dropdown-menu grid-menu">
+                            <a href="{{ url_for('lawn_care') }}">
+                                <i class="fas fa-leaf"></i> Lawn Care
+                            </a>
+                            <a href="{{ url_for('garden_design') }}">
+                                <i class="fas fa-seedling"></i> Garden Design
+                            </a>
+                            <a href="{{ url_for('hardscaping') }}">
+                                <i class="fas fa-hammer"></i> Hardscaping
+                            </a>
+                            <a href="{{ url_for('irrigation_systems') }}">
+                                <i class="fas fa-tint"></i> Irrigation Systems
+                            </a>
+                            <a href="{{ url_for('tree_services') }}">
+                                <i class="fas fa-tree"></i> Tree Services
+                            </a>
+                            <a href="{{ url_for('landscaping_maintenance') }}">
+                                <i class="fas fa-tools"></i> Landscaping Maintenance
+                            </a>
+                        </div>
                     </li>
                     <li><a href="{{ url_for('portfolio') }}" class="nav-link">Portfolio</a></li>
                     <li><a href="{{ url_for('about') }}" class="nav-link">About Us</a></li>
