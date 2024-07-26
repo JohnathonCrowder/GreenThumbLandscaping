@@ -189,10 +189,10 @@
     }
 
     .project-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));  /* Larger minimum size */
+    gap: 1.5rem;
+}
 
     .project-item {
         position: relative;
@@ -208,15 +208,18 @@
     }
 
     .project-item img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        transition: all 0.3s ease;
-    }
+    width: 100%;
+    height: 45vh;  /* Much larger, viewport-based height */
+    min-height: 350px;
+    max-height: 550px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
 
     .project-item:hover img {
         transform: scale(1.1);
     }
+    
 
     .project-info {
         position: absolute;
@@ -257,6 +260,13 @@
     .testimonial cite {
         font-weight: bold;
     }
+
+    @media (max-width: 768px) {  /* For mobile devices */
+    .project-item img {
+        height: 35vh;  /* Slightly smaller on mobile */
+        min-height: 250px;
+    }
+}
 
     @media (max-width: 768px) {
         .filter-buttons {
