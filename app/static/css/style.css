@@ -925,3 +925,16 @@ footer {
   margin-right: 10px;
   color: #4caf50;
 }
+
+@media (hover: none) and (pointer: coarse) {
+  html,
+  body,
+  * {
+    cursor: auto !important;
+  }
+
+  .custom-cursor,
+  .custom-cursor-dot {
+    display: none !important;
+  }
+}
