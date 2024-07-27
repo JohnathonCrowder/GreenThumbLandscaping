@@ -86,3 +86,13 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.getElementById('main-nav');
+
+    mobileMenuToggle.addEventListener('click', function() {
+        nav.classList.toggle('mobile-menu-open');
+    });
+});
