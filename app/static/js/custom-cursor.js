@@ -95,4 +95,15 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenuToggle.addEventListener('click', function() {
         nav.classList.toggle('mobile-menu-open');
     });
+
+    // Handle dropdown menus on mobile
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.querySelector('.dropdown-menu').classList.toggle('show');
+            }
+        });
+    });
 });

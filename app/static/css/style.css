@@ -954,7 +954,7 @@ footer {
   .mobile-menu-toggle span {
     width: 25px;
     height: 3px;
-    background-color: #ffffff; /* White lines for the hamburger menu */
+    background-color: #ffffff;
     margin: 2px 0;
     transition: all 0.3s ease;
   }
@@ -966,17 +966,25 @@ footer {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #2c5e1a; /* Dark green background */
+    background-color: #2c5e1a;
     padding: 1rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 
   nav.mobile-menu-open .nav-links ul {
     flex-direction: column;
+    padding: 0;
+    margin: 0;
   }
 
   nav.mobile-menu-open .nav-links ul li {
-    margin: 0.5rem 0;
+    margin: 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  nav.mobile-menu-open .nav-links ul li:last-child {
+    border-bottom: none;
   }
 
   nav.mobile-menu-open .dropdown-menu {
@@ -985,10 +993,30 @@ footer {
     opacity: 1;
     visibility: visible;
     transform: none;
+    background-color: transparent;
+    padding-left: 1rem;
   }
 
   nav.mobile-menu-open .nav-cta {
     margin-top: 1rem;
     text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  nav.mobile-menu-open .nav-cta .cta-button {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown-menu.show {
+    display: block;
   }
 }
