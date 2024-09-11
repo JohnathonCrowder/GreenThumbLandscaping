@@ -4,34 +4,35 @@
 
 {% block content %}
 <!-- Hero Section -->
-<header class="hero">
-    <div class="hero-content" data-aos="fade-up">
-        <h1>Transform Your Outdoor Space</h1>
-        <p>Expert landscaping services to create your dream garden</p>
-        <a href="{{ url_for('contact') }}" class="cta-button magnetic">Get a Free Quote</a>
+<header class="relative h-screen flex items-center justify-center text-white bg-cover bg-center" style="background-image: url('{{ url_for('static', filename='images/hero-bg.jpg') }}');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10 text-center px-4" data-aos="fade-up">
+        <h1 class="text-5xl md:text-6xl font-playfair font-bold mb-4">Transform Your Outdoor Space</h1>
+        <p class="text-xl mb-8">Expert landscaping services to create your dream garden</p>
+        <a href="{{ url_for('contact') }}" class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold uppercase tracking-wide shadow-lg hover:bg-primary-dark transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl magnetic">Get a Free Quote</a>
     </div>
 </header>
 
 <main class="home-page">
     <!-- About Us Section -->
-    <section class="about-section" data-aos="fade-up">
-        <div class="container">
-            <h2>Welcome to Green Thumb Landscaping</h2>
-            <p>With over 15 years of experience, we're passionate about creating beautiful, sustainable landscapes that enhance your property and lifestyle. Our team of expert landscapers combines creativity with horticultural knowlThumb to deliver stunning results.</p>
-            <div class="about-features">
-                <div class="feature" data-aos="fade-right">
-                    <i class="fas fa-leaf"></i>
-                    <h3>Eco-Friendly Practices</h3>
+    <section class="py-16 bg-white" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-playfair font-bold text-center text-primary-dark mb-8">Welcome to Green Thumb Landscaping</h2>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-12">With over 15 years of experience, we're passionate about creating beautiful, sustainable landscapes that enhance your property and lifestyle. Our team of expert landscapers combines creativity with horticultural knowledge to deliver stunning results.</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center" data-aos="fade-right">
+                    <i class="fas fa-leaf text-5xl text-primary mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2">Eco-Friendly Practices</h3>
                     <p>We prioritize sustainable landscaping methods to protect the environment.</p>
                 </div>
-                <div class="feature" data-aos="fade-up">
-                    <i class="fas fa-award"></i>
-                    <h3>Award-Winning Designs</h3>
+                <div class="text-center" data-aos="fade-up">
+                    <i class="fas fa-award text-5xl text-primary mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2">Award-Winning Designs</h3>
                     <p>Our innovative designs have earned recognition in the landscaping industry.</p>
                 </div>
-                <div class="feature" data-aos="fade-left">
-                    <i class="fas fa-users"></i>
-                    <h3>Expert Team</h3>
+                <div class="text-center" data-aos="fade-left">
+                    <i class="fas fa-users text-5xl text-primary mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2">Expert Team</h3>
                     <p>Our certified professionals ensure top-quality service for every project.</p>
                 </div>
             </div>
@@ -39,72 +40,73 @@
     </section>
 
     <!-- Services Overview -->
-    <section class="services-overview" data-aos="fade-up">
-        <div class="container">
-            <h2>Our Services</h2>
-            <p>Discover how we can enhance your outdoor living experience:</p>
-            <div class="services-grid">
-                <a href="{{ url_for('lawn_care') }}" class="service-card" data-aos="flip-left">
-                    <img src="{{ url_for('static', filename='images/lawn-care.jpg') }}" alt="Lawn Care">
-                    <div class="card-content">
-                        <h3>Lawn Care</h3>
-                        <p>Keep your lawn lush and healthy year-round with our expert maintenance.</p>
+    <section class="py-16 bg-gray-100" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-playfair font-bold text-center text-primary-dark mb-4">Our Services</h2>
+            <p class="text-lg text-center mb-12">Discover how we can enhance your outdoor living experience:</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <a href="{{ url_for('lawn_care') }}" class="bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-xl" data-aos="flip-left">
+                    <img src="{{ url_for('static', filename='images/lawn-care.jpg') }}" alt="Lawn Care" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Lawn Care</h3>
+                        <p class="text-gray-600">Keep your lawn lush and healthy year-round with our expert maintenance.</p>
                     </div>
                 </a>
                 
-                <a href="{{ url_for('garden_design') }}" class="service-card" data-aos="flip-left" data-aos-delay="100">
-                    <img src="{{ url_for('static', filename='images/garden-design.jpg') }}" alt="Garden Design">
-                    <div class="card-content">
-                        <h3>Garden Design</h3>
-                        <p>Transform your space with custom garden designs tailored to your style.</p>
+                <a href="{{ url_for('garden_design') }}" class="bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-xl" data-aos="flip-left" data-aos-delay="100">
+                    <img src="{{ url_for('static', filename='images/garden-design.jpg') }}" alt="Garden Design" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Garden Design</h3>
+                        <p class="text-gray-600">Transform your space with custom garden designs tailored to your style.</p>
                     </div>
                 </a>
                 
-                <a href="{{ url_for('hardscaping') }}" class="service-card" data-aos="flip-left" data-aos-delay="200">
-                    <img src="{{ url_for('static', filename='images/hardscaping.jpg') }}" alt="Hardscaping">
-                    <div class="card-content">
-                        <h3>Hardscaping</h3>
-                        <p>Elevate your outdoor living with beautiful patios, walkways, and more.</p>
+                <a href="{{ url_for('hardscaping') }}" class="bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-xl" data-aos="flip-left" data-aos-delay="200">
+                    <img src="{{ url_for('static', filename='images/hardscaping.jpg') }}" alt="Hardscaping" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Hardscaping</h3>
+                        <p class="text-gray-600">Elevate your outdoor living with beautiful patios, walkways, and more.</p>
                     </div>
                 </a>
                 
-                <a href="{{ url_for('irrigation_systems') }}" class="service-card" data-aos="flip-left" data-aos-delay="300">
-                    <img src="{{ url_for('static', filename='images/irrigation-systems.jpg') }}" alt="Irrigation Systems" loading="lazy">
-                    <div class="card-content">
-                        <h3>Irrigation Systems</h3>
-                        <p>Intelligent watering solutions for a thriving and sustainable landscape.</p>
+                <a href="{{ url_for('irrigation_systems') }}" class="bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-xl" data-aos="flip-left" data-aos-delay="300">
+                    <img src="{{ url_for('static', filename='images/irrigation-systems.jpg') }}" alt="Irrigation Systems" class="w-full h-64 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Irrigation Systems</h3>
+                        <p class="text-gray-600">Intelligent watering solutions for a thriving and sustainable landscape.</p>
                     </div>
                 </a>
             </div>
             <div class="text-center">
-                <a href="{{ url_for('services') }}" class="button magnetic">View All Services</a>
-             </div>
+                <a href="{{ url_for('services') }}" class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold uppercase tracking-wide shadow-lg hover:bg-primary-dark transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl magnetic">View All Services</a>
+            </div>
+        </div>
     </section>
 
     <!-- Recent Projects -->
-    <section class="recent-projects" data-aos="fade-up">
-        <div class="container">
-            <h2>Recent Projects</h2>
-            <p>Take a look at some of our latest landscaping transformations:</p>
+    <section class="py-16 bg-white" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-playfair font-bold text-center text-primary-dark mb-4">Recent Projects</h2>
+            <p class="text-lg text-center mb-12">Take a look at some of our latest landscaping transformations:</p>
             <div class="project-slider">
-                <div class="project-slide">
-                    <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Modern Backyard Retreat">
-                    <div class="project-info">
-                        <h3>Modern Backyard Retreat</h3>
+                <div class="relative">
+                    <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Modern Backyard Retreat" class="w-full h-[60vh] min-h-[400px] max-h-[600px] object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Modern Backyard Retreat</h3>
                         <p>A complete backyard transformation featuring a custom patio, Hot tub, and lush plantings.</p>
                     </div>
                 </div>
-                <div class="project-slide">
-                    <img src="{{ url_for('static', filename='images/project2.jpg') }}" alt="Drought-Resistant Front Yard">
-                    <div class="project-info">
-                        <h3>Drought-Resistant Front Yard</h3>
+                <div class="relative">
+                    <img src="{{ url_for('static', filename='images/project2.jpg') }}" alt="Drought-Resistant Front Yard" class="w-full h-[60vh] min-h-[400px] max-h-[600px] object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Drought-Resistant Front Yard</h3>
                         <p>An eco-friendly landscape design using native plants and efficient irrigation.</p>
                     </div>
                 </div>
-                <div class="project-slide">
-                    <img src="{{ url_for('static', filename='images/project3.jpg') }}" alt="beautiful background garden">
-                    <div class="project-info">
-                        <h3>Beautiful Natural Garden</h3>
+                <div class="relative">
+                    <img src="{{ url_for('static', filename='images/project3.jpg') }}" alt="beautiful background garden" class="w-full h-[60vh] min-h-[400px] max-h-[600px] object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Beautiful Natural Garden</h3>
                         <p>A natural outdoor garden space complete with a fully-equipped irrigation system.</p>
                     </div>
                 </div>
@@ -113,32 +115,32 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials" data-aos="fade-up">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
+    <section class="py-16 bg-gray-100" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-playfair font-bold text-center text-primary-dark mb-12">What Our Clients Say</h2>
             <div class="testimonial-slider">
-                <div class="testimonial">
-                    <p>"Green Thumb transformed our backyard into a stunning oasis. Their attention to detail and professionalism were impressive!"</p>
-                    <cite>- Sarah Johnson</cite>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <p class="text-lg italic mb-4">"Green Thumb transformed our backyard into a stunning oasis. Their attention to detail and professionalism were impressive!"</p>
+                    <cite class="font-semibold">- Sarah Johnson</cite>
                 </div>
-                <div class="testimonial">
-                    <p>"We've been using their lawn care service for years, and our yard has never looked better. Highly recommended!"</p>
-                    <cite>- Michael Chen</cite>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <p class="text-lg italic mb-4">"We've been using their lawn care service for years, and our yard has never looked better. Highly recommended!"</p>
+                    <cite class="font-semibold">- Michael Chen</cite>
                 </div>
-                <div class="testimonial">
-                    <p>"The hardscaping work they did on our patio exceeded our expectations. It's now our favorite place to entertain!"</p>
-                    <cite>- Emily Rodriguez</cite>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <p class="text-lg italic mb-4">"The hardscaping work they did on our patio exceeded our expectations. It's now our favorite place to entertain!"</p>
+                    <cite class="font-semibold">- Emily Rodriguez</cite>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Call to Action -->
-    <section class="cta-section" data-aos="zoom-in">
-        <div class="container">
-            <h2>Ready to Transform Your Outdoor Space?</h2>
-            <p>Contact us today for a free consultation and let's bring your landscaping vision to life!</p>
-            <a href="{{ url_for('contact') }}" class="cta-button magnetic">Get Started</a>
+    <section class="py-16 bg-primary-light" data-aos="zoom-in">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-playfair font-bold text-primary-dark mb-4">Ready to Transform Your Outdoor Space?</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">Contact us today for a free consultation and let's bring your landscaping vision to life!</p>
+            <a href="{{ url_for('contact') }}" class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold uppercase tracking-wide shadow-lg hover:bg-primary-dark transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl magnetic">Get Started</a>
         </div>
     </section>
 </main>
@@ -149,15 +151,15 @@
 <script>
     $(document).ready(function(){
         $('.project-slider').slick({
-       dots: true,
-       infinite: true,
-       speed: 800,  // Faster transitions
-       fade: true,
-       cssEase: 'ease-in-out',  // Smoother transition
-       autoplay: true,
-       autoplaySpeed: 6000,  // 6 seconds per slide
-       pauseOnHover: true,  // Pauses autoplay on hover
-   });
+            dots: true,
+            infinite: true,
+            speed: 800,
+            fade: true,
+            cssEase: 'ease-in-out',
+            autoplay: true,
+            autoplaySpeed: 6000,
+            pauseOnHover: true,
+        });
 
         $('.testimonial-slider').slick({
             dots: true,
@@ -176,106 +178,10 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 <style>
-    /* Enhanced Service Cards */
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2rem;
-        margin-bottom: 3rem;  /* Increased margin for better spacing */
-    }
-
-    .service-card {
-        background: white;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Enhanced shadow */
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .service-card:hover {
-        transform: translateY(-10px);  /* More pronounced lift effect */
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .service-card img {
-        width: 100%;
-        height: 45vh;  /* Viewport-relative for responsiveness */
-        min-height: 300px;  /* Minimum height */
-        max-height: 400px;  /* Maximum height */
-        object-fit: cover;  /* Ensures image covers area without stretching */
-        transition: transform 0.5s ease;  /* For a subtle zoom effect on hover */
-    }
-
-    .service-card:hover img {
-        transform: scale(1.05);  /* Slight zoom on hover */
-    }
-
-    /* Enhanced Project Slider */
-    .project-slider {
-        margin-top: 3rem;  /* More space above the slider */
-    }
-
-    .project-slide img {
-        width: 100%;
-        height: 60vh;  /* Taller viewport-relative height */
-        min-height: 400px;  /* Ensures a good minimum height */
-        max-height: 600px;  /* Maximum height limit */
-        object-fit: cover;
-    }
-
-    .project-info {
-        background: rgba(0, 0, 0, 0.7);  /* Slightly more opaque for better text visibility */
-        padding: 1.5rem;  /* More padding */
-    }
-
-    .project-info h3 {
-        font-size: 1.5rem;  /* Larger title */
-        margin-bottom: 0.5rem;
-    }
-
-    .project-info p {
-        font-size: 1rem;
-    }
-
-    a.service-card {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    height: 100%;  /* Makes full card clickable */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-a.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);  /* Gives a "lift" on hover */
-}
-
-.card-content {
-    padding: 1rem;  /* Adds some spacing inside cards */
-}
-
-.button.magnetic {
-   background-color: #4CAF50;  /* Your brand green color */
-   color: white;
-   padding: 12px 30px;  /* Larger clickable area */
-   border-radius: 50px;  /* Very rounded Thumbs, modern aesthetic */
-   text-transform: uppercase;  /* Makes it feel more like a strong CTA */
-   letter-spacing: 1px;  /* gives a little breathing room between letters */
-   font-weight: 600;  /* Makes it a little bolder */
-   box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);  /* Gives a subtle 'lifted' effect */
-   transition: all 0.3s ease;  /* Smooth transition for hover effects */
-}
-
-.button.magnetic:hover {
-   background-color: #45a049;  /* Slightly darker on hover */
-   box-shadow: 0 6px 12px rgba(76, 175, 80, 0.5);  /* Bigger shadow on hover, feels interactive! */
-   transform: translateY(-2px);  /* Slight lift on hover */
-}
-
-    /* Responsive adjustments */
+    /* Any additional custom styles that can't be handled by Tailwind */
     @media (max-width: 768px) {
-        .service-card img, .project-slide img {
-            height: 35vh;  /* Slightly reduced height for mobile */
+        .project-slider img, .service-card img {
+            height: 35vh;
             min-height: 250px;
         }
     }

@@ -3,42 +3,43 @@
 {% block title %}Contact Us - Green Thumb Landscaping{% endblock %}
 
 {% block content %}
-<header class="hero service-hero">
-    <div class="hero-content" data-aos="fade-up">
-        <h1>Contact Us</h1>
-        <p>Get in touch for a free quote or to discuss your landscaping needs</p>
+<header class="relative h-[60vh] flex items-center justify-center text-white bg-cover bg-center bg-fixed" style="background-image: url('{{ url_for('static', filename='images/contact-hero.jpg') }}');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10 max-w-3xl mx-auto p-8 rounded-lg bg-black bg-opacity-60 text-center" data-aos="fade-up">
+        <h1 class="text-4xl md:text-5xl font-playfair font-bold mb-4 shadow-text">Contact Us</h1>
+        <p class="text-xl mb-6">Get in touch for a free quote or to discuss your landscaping needs</p>
     </div>
 </header>
 
 <main class="contact-page">
-    <section class="contact-intro" data-aos="fade-up">
-        <div class="container">
-            <h2>Let's Bring Your Vision to Life</h2>
-            <p>Whether you're looking to transform your backyard, need regular lawn maintenance, or want to discuss a commercial landscaping project, we're here to help. Reach out to us today, and one of our experts will get back to you within 24 hours.</p>
+    <section class="py-16" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-playfair font-bold text-center text-primary-dark mb-8">Let's Bring Your Vision to Life</h2>
+            <p class="text-lg text-center max-w-3xl mx-auto">Whether you're looking to transform your backyard, need regular lawn maintenance, or want to discuss a commercial landscaping project, we're here to help. Reach out to us today, and one of our experts will get back to you within 24 hours.</p>
         </div>
     </section>
 
-    <section class="contact-content" data-aos="fade-up">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-form">
-                    <h3>Request a Quote</h3>
+    <section class="py-16 bg-gray-100" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-6">Request a Quote</h3>
                     <form action="#" method="post" id="quoteForm">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-bold mb-2">Full Name *</label>
+                            <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-bold mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
                         </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 font-bold mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
                         </div>
-                        <div class="form-group">
-                            <label for="service">Service Interested In *</label>
-                            <select id="service" name="service" required>
+                        <div class="mb-4">
+                            <label for="service" class="block text-gray-700 font-bold mb-2">Service Interested In *</label>
+                            <select id="service" name="service" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
                                 <option value="">Select a service</option>
                                 <option value="lawn_care">Lawn Care</option>
                                 <option value="garden_design">Garden Design</option>
@@ -48,70 +49,71 @@
                                 <option value="other">Other</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Project Details *</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-bold mb-2">Project Details *</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label class="checkbox-container">
-                                <input type="checkbox" id="newsletter" name="newsletter">
-                                <span class="checkmark"></span>
-                                Sign up for our newsletter
+                        <div class="mb-6">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" id="newsletter" name="newsletter" class="form-checkbox text-primary">
+                                <span class="ml-2">Sign up for our newsletter</span>
                             </label>
                         </div>
-                        <button type="submit" class="submit-button">Request Quote</button>
+                        <button type="submit" class="bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-primary-dark transition duration-300">Request Quote</button>
                     </form>
                 </div>
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>123 Green Street, Philadelphia, PA 19103</p>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-6">Get in Touch</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-primary text-xl w-8"></i>
+                            <p>123 Green Street, Philadelphia, PA 19103</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-primary text-xl w-8"></i>
+                            <p>(215) 555-0123</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-primary text-xl w-8"></i>
+                            <p>info@greenThumblandscaping.com</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-primary text-xl w-8 mt-1"></i>
+                            <p>Mon - Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 4:00 PM<br>Sun: Closed</p>
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <p>(215) 555-0123</p>
+                    <div class="mt-6 flex space-x-4">
+                        <a href="#" target="_blank" class="text-primary hover:text-primary-dark transition duration-300"><i class="fab fa-facebook-f text-2xl"></i></a>
+                        <a href="#" target="_blank" class="text-primary hover:text-primary-dark transition duration-300"><i class="fab fa-twitter text-2xl"></i></a>
+                        <a href="#" target="_blank" class="text-primary hover:text-primary-dark transition duration-300"><i class="fab fa-instagram text-2xl"></i></a>
+                        <a href="#" target="_blank" class="text-primary hover:text-primary-dark transition duration-300"><i class="fab fa-linkedin-in text-2xl"></i></a>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>info@greenThumblandscaping.com</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <p>Mon - Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 4:00 PM<br>Sun: Closed</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24477.432994343227!2d-75.16103361197954!3d39.95251439349209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c62f36fbe869%3A0xa436e1d13cf7c05b!2sCenter%20City%2C%20Philadelphia%2C%20PA!5e0!3m2!1sen!2sus!4v1620764146364!5m2!1sen!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="mt-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24477.432994343227!2d-75.16103361197954!3d39.95251439349209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c62f36fbe869%3A0xa436e1d13cf7c05b!2sCenter%20City%2C%20Philadelphia%2C%20PA!5e0!3m2!1sen!2sus!4v1620764146364!5m2!1sen!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="faq" data-aos="fade-up">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>What areas do you service?</h3>
+    <section class="py-16" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-playfair font-bold text-center text-primary-dark mb-12">Frequently Asked Questions</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2 text-primary">What areas do you service?</h3>
                     <p>We primarily serve the greater Philadelphia area, including surrounding suburbs within a 50-mile radius.</p>
                 </div>
-                <div class="faq-item">
-                    <h3>Do you offer free consultations?</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2 text-primary">Do you offer free consultations?</h3>
                     <p>Yes, we offer free initial consultations for most of our services. This allows us to assess your needs and provide an accurate quote.</p>
                 </div>
-                <div class="faq-item">
-                    <h3>What's your typical response time?</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2 text-primary">What's your typical response time?</h3>
                     <p>We strive to respond to all inquiries within 24 hours during business days. For urgent matters, please call us directly.</p>
                 </div>
-                <div class="faq-item">
-                    <h3>Do you provide commercial landscaping services?</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2 text-primary">Do you provide commercial landscaping services?</h3>
                     <p>Absolutely! We offer a full range of commercial landscaping services for businesses, HOAs, and other organizations.</p>
                 </div>
             </div>
@@ -122,209 +124,8 @@
 
 {% block extra_css %}
 <style>
-    
-
-    .service-hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-    }
-
-    .hero-content {
-        position: relative;
-        z-index: 1;
-        max-width: 800px;
-        padding: 2rem;
-        border-radius: 10px;
-        background: rgba(0, 0, 0, 0.6);
-    }
-
-    .hero-content h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
+    .shadow-text {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .hero-content p {
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .contact-page section {
-        padding: 4rem 0;
-    }
-
-    .contact-intro {
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    .contact-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-    }
-
-    .contact-form, .contact-info {
-        background-color: #f9f9f9;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .form-group {
-        margin-bottom: 1.5rem;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: bold;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        width: 100%;
-        padding: 0.75rem;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 1rem;
-    }
-
-    .submit-button {
-        background-color: #4caf50;
-        color: white;
-        padding: 0.75rem 1.5rem;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1rem;
-        transition: background-color 0.3s ease;
-    }
-
-    .submit-button:hover {
-        background-color: #45a049;
-    }
-
-    .info-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1rem;
-    }
-
-    .info-item i {
-        font-size: 1.2rem;
-        color: #4caf50;
-        margin-right: 1rem;
-        width: 20px;
-    }
-
-    .social-links {
-        margin-top: 1.5rem;
-    }
-
-    .social-links a {
-        display: inline-block;
-        margin-right: 1rem;
-        color: #4caf50;
-        font-size: 1.5rem;
-        transition: color 0.3s ease;
-    }
-
-    .social-links a:hover {
-        color: #45a049;
-    }
-
-    .map-container {
-        margin-top: 1.5rem;
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
-    .faq-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-    }
-
-    .faq-item {
-        background-color: #f9f9f9;
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .faq-item h3 {
-        margin-bottom: 0.5rem;
-        color: #4caf50;
-    }
-
-    .checkbox-container {
-        display: block;
-        position: relative;
-        padding-left: 35px;
-        margin-bottom: 12px;
-        cursor: pointer;
-        font-size: 16px;
-        user-select: none;
-    }
-
-    .checkbox-container input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-    }
-
-    .checkmark {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-        border-radius: 5px;
-    }
-
-    .checkbox-container:hover input ~ .checkmark {
-        background-color: #ccc;
-    }
-
-    .checkbox-container input:checked ~ .checkmark {
-        background-color: #4caf50;
-    }
-
-    .checkmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-    }
-
-    .checkbox-container input:checked ~ .checkmark:after {
-        display: block;
-    }
-
-    .checkbox-container .checkmark:after {
-        left: 9px;
-        top: 5px;
-        width: 5px;
-        height: 10px;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        transform: rotate(45deg);
-    }
-
-    @media (max-width: 768px) {
-        .contact-grid {
-            grid-template-columns: 1fr;
-        }
     }
 </style>
 {% endblock %}

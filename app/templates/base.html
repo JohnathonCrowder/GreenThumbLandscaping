@@ -1,23 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="cursor-none">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Green Thumb Landscaping{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <!-- Slick Carousel CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <!-- Add your favicon here -->
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
-    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#4caf50',
+                        'primary-dark': '#2c5e1a',
+                        'primary-light': '#9cff57',
+                    },
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif'],
+                        'playfair': ['"Playfair Display"', 'serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom styles that can't be easily replicated with Tailwind */
+        .custom-cursor {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(76, 175, 80, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+            transition: transform 0.1s ease;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+        }
+        .custom-cursor-dot {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background: #4caf50;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+        }
+        .cursor-clickable {
+            transform: scale(1.5);
+            background-color: rgba(76, 175, 80, 0.1);
+        }
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            transition: opacity 0.75s, visibility 0.75s;
+            z-index: 9999;
+        }
+        .loader::after {
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 15px solid #dddddd;
+            border-top-color: #4caf50;
+            border-radius: 50%;
+            animation: loading 0.75s ease infinite;
+        }
+        @keyframes loading {
+            from { transform: rotate(0turn); }
+            to { transform: rotate(1turn); }
+        }
+        .loader-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        html, body, * { cursor: none !important; }
+        @media (hover: none) and (pointer: coarse) {
+            html, body, * { cursor: auto !important; }
+            .custom-cursor, .custom-cursor-dot { display: none !important; }
+        }
+    </style>
     {% block extra_css %}{% endblock %}
 </head>
-<body>
+<body class="font-roboto text-gray-800 bg-gray-100 cursor-none">
     <!-- Loader -->
     <div class="loader"></div>
 
@@ -26,52 +104,57 @@
     <div class="custom-cursor-dot"></div>
 
     <!-- Navigation -->
-    <nav id="main-nav">
-        <div class="nav-container">
+    <nav id="main-nav" class="fixed w-full z-50 transition-all duration-300 ease-in-out" style="background-color: rgba(44, 94, 26, 0.637);">
+        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
             <div class="logo">
-                <a href="{{ url_for('index') }}">
-                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Green Thumb Landscaping Logo">
+                <a href="{{ url_for('index') }}" class="block">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Green Thumb Landscaping Logo" class="h-24 transition-transform duration-300 ease-in-out hover:scale-105">
                 </a>
             </div>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="{{ url_for('index') }}" class="nav-link">Home</a></li>
-                    <li class="dropdown">
-                        <a href="{{ url_for('services') }}" class="nav-link">Services</a>
-                        <div class="dropdown-menu grid-menu">
-                            <a href="{{ url_for('lawn_care') }}">
-                                <i class="fas fa-leaf"></i> Lawn Care
+            <div class="nav-links hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="{{ url_for('index') }}" class="text-white font-medium hover:text-primary-light transition-colors duration-300">Home</a></li>
+                    <li class="relative group">
+                        <a href="{{ url_for('services') }}" class="text-white font-medium hover:text-primary-light transition-colors duration-300 flex items-center">
+                            Services
+                            <i class="fas fa-chevron-down ml-1 text-sm transition-transform duration-300 group-hover:rotate-180"></i>
+                        </a>
+                        <div class="dropdown-menu grid grid-cols-2 gap-2 absolute top-full left-0 bg-primary-dark shadow-lg opacity-0 invisible transition-all duration-300 ease-in-out transform translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 min-w-[400px] p-4">
+                            <a href="{{ url_for('lawn_care') }}" class="flex items-center text-white hover:bg-primary/10 p-2 transition-colors duration-300">
+                                <i class="fas fa-leaf text-primary-light mr-2"></i> Lawn Care
                             </a>
-                            <a href="{{ url_for('garden_design') }}">
-                                <i class="fas fa-seedling"></i> Garden Design
+                            <a href="{{ url_for('garden_design') }}" class="flex items-center text-white hover:bg-primary/10 p-2 transition-colors duration-300">
+                                <i class="fas fa-seedling text-primary-light mr-2"></i> Garden Design
                             </a>
-                            <a href="{{ url_for('hardscaping') }}">
-                                <i class="fas fa-hammer"></i> Hardscaping
+                            <a href="{{ url_for('hardscaping') }}" class="flex items-center text-white hover:bg-primary/10 p-2 transition-colors duration-300">
+                                <i class="fas fa-hammer text-primary-light mr-2"></i> Hardscaping
                             </a>
-                            <a href="{{ url_for('irrigation_systems') }}">
-                                <i class="fas fa-tint"></i> Irrigation Systems
+                            <a href="{{ url_for('irrigation_systems') }}" class="flex items-center text-white hover:bg-primary/10 p-2 transition-colors duration-300">
+                                <i class="fas fa-tint text-primary-light mr-2"></i> Irrigation Systems
                             </a>
-                            <a href="{{ url_for('tree_services') }}">
-                                <i class="fas fa-tree"></i> Tree Services
+                            <a href="{{ url_for('tree_services') }}" class="flex items-center text-white hover:bg-primary/10 p-2 transition-colors duration-300">
+                                <i class="fas fa-tree text-primary-light mr-2"></i> Tree Services
                             </a>
-                            <a href="{{ url_for('landscaping_maintenance') }}">
-                                <i class="fas fa-tools"></i> Landscaping Maintenance
+                            <a href="{{ url_for('landscaping_maintenance') }}" class="flex items-center text-white hover:bg-primary/10 p-2 transition-colors duration-300">
+                                <i class="fas fa-tools text-primary-light mr-2"></i> Landscaping Maintenance
                             </a>
                         </div>
                     </li>
-                    <li><a href="{{ url_for('portfolio') }}" class="nav-link">Portfolio</a></li>
-                    <li><a href="{{ url_for('about') }}" class="nav-link">About Us</a></li>
-                    <li><a href="{{ url_for('contact') }}" class="nav-link">Contact</a></li>
+                    <li><a href="{{ url_for('portfolio') }}" class="text-white font-medium hover:text-primary-light transition-colors duration-300">Portfolio</a></li>
+                    <li><a href="{{ url_for('about') }}" class="text-white font-medium hover:text-primary-light transition-colors duration-300">About Us</a></li>
+                    <li><a href="{{ url_for('contact') }}" class="text-white font-medium hover:text-primary-light transition-colors duration-300">Contact</a></li>
                 </ul>
             </div>
             
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="md:hidden">
+                <button class="mobile-menu-toggle flex flex-col space-y-1">
+                    <span class="w-6 h-0.5 bg-white"></span>
+                    <span class="w-6 h-0.5 bg-white"></span>
+                    <span class="w-6 h-0.5 bg-white"></span>
+                </button>
             </div>
-            <div class="nav-cta">
-                <a href="{{ url_for('contact') }}" class="cta-button">Get a Quote</a>
+            <div class="nav-cta hidden md:block ml-6">
+                <a href="{{ url_for('contact') }}" class="bg-primary-light text-primary-dark px-4 py-2 rounded font-medium transition-all duration-300 hover:bg-opacity-90 hover:-translate-y-0.5 hover:shadow-lg">Get a Quote</a>
             </div>
         </div>
     </nav>
@@ -83,37 +166,37 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Green Thumb Landscaping</h3>
+    <footer class="bg-primary-dark text-white pt-8">
+        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="font-playfair text-xl mb-4 text-primary-light">Green Thumb Landscaping</h3>
                 <p>Transforming outdoor spaces with expertise and passion since 2005.</p>
             </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="{{ url_for('index') }}">Home</a></li>
-                    <li><a href="{{ url_for('services') }}">Services</a></li>
-                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <div>
+                <h3 class="font-playfair text-xl mb-4 text-primary-light">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="{{ url_for('index') }}" class="hover:text-primary-light transition-colors duration-300">Home</a></li>
+                    <li><a href="{{ url_for('services') }}" class="hover:text-primary-light transition-colors duration-300">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}" class="hover:text-primary-light transition-colors duration-300">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
+            <div>
+                <h3 class="font-playfair text-xl mb-4 text-primary-light">Contact Us</h3>
                 <p>123 Green Street, Anytown, USA 12345</p>
                 <p>Phone: (555) 123-4567</p>
                 <p>Email: info@greenThumb.com</p>
             </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-links">
-                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <div>
+                <h3 class="font-playfair text-xl mb-4 text-primary-light">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-2xl hover:text-primary-light transition-colors duration-300"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-2xl hover:text-primary-light transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-2xl hover:text-primary-light transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-2xl hover:text-primary-light transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="mt-8 py-4 border-t border-white border-opacity-10 text-center">
             <p>&copy; 2023 Green Thumb Landscaping. All rights reserved.</p>
         </div>
     </footer>
@@ -126,24 +209,19 @@
             once: true,
         });
     </script>
-  <!-- Scripts -->
-    <!-- jQuery (required for Slick) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
-    <!-- Slick Carousel JavaScript -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    
-    <!-- Your custom scripts -->
     <script src="{{ url_for('static', filename='js/custom-cursor.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/micro-interactions.js') }}"></script>
     <script>
         // Navigation scroll effect
         window.addEventListener('scroll', function() {
             var nav = document.getElementById('main-nav');
             if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
+                nav.style.backgroundColor = 'rgba(44, 94, 26, 0.98)';
+                nav.classList.add('py-1');
             } else {
-                nav.classList.remove('scrolled');
+                nav.style.backgroundColor = 'rgba(44, 94, 26, 0.637)';
+                nav.classList.remove('py-1');
             }
         });
 
@@ -154,6 +232,12 @@
             loader.addEventListener('transitionend', function() {
                 document.body.removeChild(loader);
             });
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('hidden');
+            document.querySelector('.nav-cta').classList.toggle('hidden');
         });
     </script>
     {% block extra_js %}{% endblock %}
