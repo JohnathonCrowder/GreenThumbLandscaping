@@ -3,103 +3,99 @@
 {% block title %}Our Portfolio - Green Thumb Landscaping{% endblock %}
 
 {% block content %}
-<header class="hero service-hero">
-    <div class="hero-content" data-aos="fade-up">
-        <h1>Our Portfolio</h1>
-        <p>Showcasing our finest landscaping projects</p>
+<header class="relative flex items-center justify-center h-[60vh] bg-cover bg-center bg-fixed text-white" style="background-image: url('{{ url_for('static', filename='images/portfolio-hero.jpg') }}')">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10 max-w-3xl p-8 rounded-lg bg-black bg-opacity-60 text-center" data-aos="fade-up">
+        <h1 class="text-5xl font-bold mb-4 shadow-text">Our Portfolio</h1>
+        <p class="text-xl">Showcasing our finest landscaping projects</p>
     </div>
 </header>
 
-<main class="portfolio-page">
-    <section class="portfolio-intro" data-aos="fade-up">
-        <div class="container">
-            <h2>Transforming Outdoor Spaces</h2>
-            <p>At Green Thumb Landscaping, we take pride in creating beautiful, functional, and sustainable outdoor environments. Our portfolio showcases a diverse range of projects, from intimate residential gardens to expansive commercial landscapes. Each project represents our commitment to quality, creativity, and environmental stewardship.</p>
-        </div>
+<main class="py-12">
+    <section class="container mx-auto px-4 mb-16" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-4 text-center">Transforming Outdoor Spaces</h2>
+        <p class="text-lg text-center max-w-4xl mx-auto">At Green Thumb Landscaping, we take pride in creating beautiful, functional, and sustainable outdoor environments. Our portfolio showcases a diverse range of projects, from intimate residential gardens to expansive commercial landscapes. Each project represents our commitment to quality, creativity, and environmental stewardship.</p>
     </section>
 
-    <section class="portfolio-grid" data-aos="fade-up">
-        <div class="container">
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="residential">Residential</button>
-                <button class="filter-btn" data-filter="commercial">Commercial</button>
-                <button class="filter-btn" data-filter="sustainable">Sustainable Designs</button>
-            </div>
-
-            <div class="project-grid">
-                <div class="project-item residential" data-aos="fade-up">
-                    <img src="{{ url_for('static', filename='images/portfolio/residential-1.jpg') }}" alt="Modern Backyard Retreat">
-                    <div class="project-info">
-                        <h3>Modern Backyard Retreat</h3>
-                        <p>A contemporary design featuring a sleek patio, hot tub, and native plantings.</p>
-                    </div>
-                </div>
-                <div class="project-item commercial" data-aos="fade-up" data-aos-delay="100">
-                    <img src="{{ url_for('static', filename='images/portfolio/commercial-1.jpg') }}" alt="Corporate Campus Landscape">
-                    <div class="project-info">
-                        <h3>Corporate Sign Landscape</h3>
-                        <p>Beautiful Stone Wall and mulch bed built around a coroporate sign</p>
-                    </div>
-                </div>
-                <div class="project-item sustainable" data-aos="fade-up" data-aos-delay="200">
-                    <img src="{{ url_for('static', filename='images/portfolio/sustainable-1.jpg') }}" alt="Drought-Resistant Front Yard">
-                    <div class="project-info">
-                        <h3>Drought-Resistant Front Yard</h3>
-                        <p>Water-efficient design using native plants and smart irrigation systems.</p>
-                    </div>
-                </div>
-                <div class="project-item residential" data-aos="fade-up">
-                    <img src="{{ url_for('static', filename='images/portfolio/residential-2.jpg') }}" alt="Luxury Pool and Patio">
-                    <div class="project-info">
-                        <h3>Beautiful Garden Path</h3>
-                        <p>Beautiful outdoor garden space with custom path, edging, and lush landscaping.</p>
-                    </div>
-                </div>
-                <div class="project-item commercial" data-aos="fade-up" data-aos-delay="100">
-                    <img src="{{ url_for('static', filename='images/portfolio/commercial-2.jpg') }}" alt="Hotel Entrance Renovation">
-                    <div class="project-info">
-                        <h3>Rock Garden around Flagpole</h3>
-                        <p>Elegant and welcoming landscape design for a Large Country Farm</p>
-                    </div>
-                </div>
-                <div class="project-item sustainable" data-aos="fade-up" data-aos-delay="200">
-                    <img src="{{ url_for('static', filename='images/portfolio/sustainable-2.jpg') }}" alt="Rain Garden Installation">
-                    <div class="project-info">
-                        <h3>Extended Driveway</h3>
-                        <p>This Stone Driveway Extension was created to prevent ruts in the yard</p>
-                    </div>
-                </div>
-                <!-- Add more project items as needed -->
-            </div>
+    <section class="container mx-auto px-4" data-aos="fade-up">
+        <div class="flex justify-center flex-wrap mb-8">
+            <button class="filter-btn active bg-gray-200 hover:bg-green-500 hover:text-white px-4 py-2 m-2 rounded transition duration-300" data-filter="all">All Projects</button>
+            <button class="filter-btn bg-gray-200 hover:bg-green-500 hover:text-white px-4 py-2 m-2 rounded transition duration-300" data-filter="residential">Residential</button>
+            <button class="filter-btn bg-gray-200 hover:bg-green-500 hover:text-white px-4 py-2 m-2 rounded transition duration-300" data-filter="commercial">Commercial</button>
+            <button class="filter-btn bg-gray-200 hover:bg-green-500 hover:text-white px-4 py-2 m-2 rounded transition duration-300" data-filter="sustainable">Sustainable Designs</button>
         </div>
-    </section>
 
-    <section class="testimonials" data-aos="fade-up">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <p>"Green Thumb transformed our backyard into a stunning oasis. Their attention to detail and professionalism were impressive!"</p>
-                    <cite>- Sarah Johnson, Residential Client</cite>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-item residential relative overflow-hidden rounded-lg shadow-lg transition duration-300 transform hover:-translate-y-1 hover:shadow-xl" data-aos="fade-up">
+                <img src="{{ url_for('static', filename='images/portfolio/residential-1.jpg') }}" alt="Modern Backyard Retreat" class="w-full h-[45vh] min-h-[350px] max-h-[550px] object-cover transition duration-300 transform hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-70 text-white p-4 flex flex-col justify-end transform translate-y-full transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Modern Backyard Retreat</h3>
+                    <p>A contemporary design featuring a sleek patio, hot tub, and native plantings.</p>
                 </div>
-                <div class="testimonial">
-                    <p>"The sustainable landscape design Green Thumb created for our office park has not only beautified our space but also significantly reduced our water usage."</p>
-                    <cite>- Michael Chen, Commercial Client</cite>
+            </div>
+            <div class="project-item commercial relative overflow-hidden rounded-lg shadow-lg transition duration-300 transform hover:-translate-y-1 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                <img src="{{ url_for('static', filename='images/portfolio/commercial-1.jpg') }}" alt="Corporate Sign Landscape" class="w-full h-[45vh] min-h-[350px] max-h-[550px] object-cover transition duration-300 transform hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-70 text-white p-4 flex flex-col justify-end transform translate-y-full transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Corporate Sign Landscape</h3>
+                    <p>Beautiful Stone Wall and mulch bed built around a corporate sign</p>
                 </div>
-                <div class="testimonial">
-                    <p>"We've received countless compliments on our new drought-resistant front yard. Green Thumb's expertise in sustainable design is unmatched!"</p>
-                    <cite>- Emily Rodriguez, Residential Client</cite>
+            </div>
+            <div class="project-item sustainable relative overflow-hidden rounded-lg shadow-lg transition duration-300 transform hover:-translate-y-1 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ url_for('static', filename='images/portfolio/sustainable-1.jpg') }}" alt="Drought-Resistant Front Yard" class="w-full h-[45vh] min-h-[350px] max-h-[550px] object-cover transition duration-300 transform hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-70 text-white p-4 flex flex-col justify-end transform translate-y-full transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Drought-Resistant Front Yard</h3>
+                    <p>Water-efficient design using native plants and smart irrigation systems.</p>
+                </div>
+            </div>
+            <div class="project-item residential relative overflow-hidden rounded-lg shadow-lg transition duration-300 transform hover:-translate-y-1 hover:shadow-xl" data-aos="fade-up">
+                <img src="{{ url_for('static', filename='images/portfolio/residential-2.jpg') }}" alt="Beautiful Garden Path" class="w-full h-[45vh] min-h-[350px] max-h-[550px] object-cover transition duration-300 transform hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-70 text-white p-4 flex flex-col justify-end transform translate-y-full transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Beautiful Garden Path</h3>
+                    <p>Beautiful outdoor garden space with custom path, edging, and lush landscaping.</p>
+                </div>
+            </div>
+            <div class="project-item commercial relative overflow-hidden rounded-lg shadow-lg transition duration-300 transform hover:-translate-y-1 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                <img src="{{ url_for('static', filename='images/portfolio/commercial-2.jpg') }}" alt="Rock Garden around Flagpole" class="w-full h-[45vh] min-h-[350px] max-h-[550px] object-cover transition duration-300 transform hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-70 text-white p-4 flex flex-col justify-end transform translate-y-full transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Rock Garden around Flagpole</h3>
+                    <p>Elegant and welcoming landscape design for a Large Country Farm</p>
+                </div>
+            </div>
+            <div class="project-item sustainable relative overflow-hidden rounded-lg shadow-lg transition duration-300 transform hover:-translate-y-1 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ url_for('static', filename='images/portfolio/sustainable-2.jpg') }}" alt="Extended Driveway" class="w-full h-[45vh] min-h-[350px] max-h-[550px] object-cover transition duration-300 transform hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-70 text-white p-4 flex flex-col justify-end transform translate-y-full transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Extended Driveway</h3>
+                    <p>This Stone Driveway Extension was created to prevent ruts in the yard</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta-section" data-aos="zoom-in">
-        <div class="container text-center">
-            <h2>Ready to Transform Your Outdoor Space?</h2>
-            <p>Let's bring your landscaping vision to life.</p>
-            <a href="{{ url_for('contact') }}" class="cta-button">Get Started</a>
+    <section class="bg-gray-100 py-16 mt-16" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">What Our Clients Say</h2>
+            <div class="testimonial-slider max-w-3xl mx-auto">
+                <div class="text-center px-8">
+                    <p class="text-lg italic mb-4">"Green Thumb transformed our backyard into a stunning oasis. Their attention to detail and professionalism were impressive!"</p>
+                    <cite class="font-bold">- Sarah Johnson, Residential Client</cite>
+                </div>
+                <div class="text-center px-8">
+                    <p class="text-lg italic mb-4">"The sustainable landscape design Green Thumb created for our office park has not only beautified our space but also significantly reduced our water usage."</p>
+                    <cite class="font-bold">- Michael Chen, Commercial Client</cite>
+                </div>
+                <div class="text-center px-8">
+                    <p class="text-lg italic mb-4">"We've received countless compliments on our new drought-resistant front yard. Green Thumb's expertise in sustainable design is unmatched!"</p>
+                    <cite class="font-bold">- Emily Rodriguez, Residential Client</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-green-600 text-white py-16" data-aos="zoom-in">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Transform Your Outdoor Space?</h2>
+            <p class="text-xl mb-8">Let's bring your landscaping vision to life.</p>
+            <a href="{{ url_for('contact') }}" class="bg-white text-green-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-green-100 transition duration-300">Get Started</a>
         </div>
     </section>
 </main>
@@ -107,174 +103,14 @@
 
 {% block extra_css %}
 <style>
-    .portfolio-hero {
-        background-image: url("{{ url_for('static', filename='images/portfolio-hero.jpg') }}");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        height: 60vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: #fff;
-        position: relative;
-    }
-
-    .portfolio-hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-    }
-
-    .hero-content {
-        position: relative;
-        z-index: 1;
-        max-width: 800px;
-        padding: 2rem;
-        border-radius: 10px;
-        background: rgba(0, 0, 0, 0.6);
-        animation: fadeInUp 1s ease-out;
-    }
-
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .hero-content h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
+    .shadow-text {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
-
-    .hero-content p {
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .portfolio-page section {
-        padding: 4rem 0;
-    }
-
-    .filter-buttons {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 2rem;
-    }
-
-    .filter-btn {
-        background-color: #f0f0f0;
-        border: none;
-        padding: 0.5rem 1rem;
-        margin: 0 0.5rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .filter-btn.active,
-    .filter-btn:hover {
-        background-color: #4caf50;
-        color: white;
-    }
-
-    .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));  /* Larger minimum size */
-    gap: 1.5rem;
-}
-
-    .project-item {
-        position: relative;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    .project-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .project-item img {
-    width: 100%;
-    height: 45vh;  /* Much larger, viewport-based height */
-    min-height: 350px;
-    max-height: 550px;
-    object-fit: cover;
-    transition: all 0.3s ease;
-}
-
-    .project-item:hover img {
-        transform: scale(1.1);
-    }
     
-
-    .project-info {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.7);
-        color: white;
-        padding: 1rem;
-        transform: translateY(100%);
-        transition: all 0.3s ease;
-    }
-
-    .project-item:hover .project-info {
-        transform: translateY(0);
-    }
-
-    .project-info h3 {
-        margin-bottom: 0.5rem;
-    }
-
-    .testimonial-slider {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    .testimonial {
-        text-align: center;
-        padding: 2rem;
-    }
-
-    .testimonial p {
-        font-style: italic;
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
-    }
-
-    .testimonial cite {
-        font-weight: bold;
-    }
-
-    @media (max-width: 768px) {  /* For mobile devices */
-    .project-item img {
-        height: 35vh;  /* Slightly smaller on mobile */
-        min-height: 250px;
-    }
-}
-
     @media (max-width: 768px) {
-        .filter-buttons {
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            margin-bottom: 0.5rem;
+        .project-item img {
+            height: 35vh;
+            min-height: 250px;
         }
     }
 </style>
@@ -291,20 +127,20 @@
             button.addEventListener('click', function() {
                 const filter = this.getAttribute('data-filter');
 
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
+                filterButtons.forEach(btn => btn.classList.remove('bg-green-500', 'text-white'));
+                this.classList.add('bg-green-500', 'text-white');
 
                 projectItems.forEach(item => {
                     if (filter === 'all' || item.classList.contains(filter)) {
-                        item.style.display = 'block';
+                        item.classList.remove('hidden');
                     } else {
-                        item.style.display = 'none';
+                        item.classList.add('hidden');
                     }
                 });
             });
         });
 
-        // Initialize testimonial slider
+        // Initialize testimonial slider (assuming you're using Slick slider)
         $('.testimonial-slider').slick({
             dots: true,
             infinite: true,
@@ -313,6 +149,16 @@
             cssEase: 'linear',
             autoplay: true,
             autoplaySpeed: 5000
+        });
+
+        // Hover effect for project items
+        projectItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.querySelector('div:last-child').classList.remove('translate-y-full');
+            });
+            item.addEventListener('mouseleave', () => {
+                item.querySelector('div:last-child').classList.add('translate-y-full');
+            });
         });
     });
 </script>
