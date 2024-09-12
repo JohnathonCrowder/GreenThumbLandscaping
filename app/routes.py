@@ -1,5 +1,7 @@
 from flask import render_template
 from app import app
+import json
+
 
 @app.route('/')
 def index():
@@ -9,25 +11,40 @@ def index():
 def services():
     return render_template('services.html', title='Our Services')
 
+@app.route('/services/<service_name>')
+def service(service_name):
+    with open('services.json', 'r') as f:
+        services = json.load(f)
+    
+    if service_name in services:
+        service_info = services[service_name]
+        return render_template('services_template.html', service=service_info)
+    else:
+        abort(404)
+
 @app.route('/services/lawn-care')
 def lawn_care():
-    return render_template('lawn_care.html', title='Lawn Care Services')
+    return service('lawn_care')
 
 @app.route('/services/garden-design')
 def garden_design():
-    return render_template('garden_design.html', title='Garden Design Services')
+    return service('garden_design')
 
 @app.route('/services/hardscaping')
 def hardscaping():
-    return render_template('hardscaping.html', title='Hardscaping Services')
+    return service('hardscaping')
 
 @app.route('/services/irrigation-systems')
 def irrigation_systems():
-    return render_template('irrigation_systems.html', title='Irrigation System Services')
+    return service('irrigation_systems')
+
+@app.route('/services/landscaping-maintenance')
+def landscaping_maintenance():
+    return service('landscaping_maintenance')
 
 @app.route('/services/tree-services')
 def tree_services():
-    return render_template('tree_services.html', title='Tree Services')
+    return service('tree_services')
 
 @app.route('/contact')
 def contact():
@@ -42,6 +59,3 @@ def about():
 def portfolio():
     return render_template('portfolio.html', title='Our Portfolio')
 
-@app.route('/services/landscaping-maintenance')
-def landscaping_maintenance():
-    return render_template('landscaping_maintenance.html', title='Landscaping Maintenance')

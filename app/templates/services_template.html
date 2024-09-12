@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}{{ service.title }} - Green Thumb Landscaping{% endblock %}
+
+{% block content %}
+<header class="relative bg-cover bg-center h-[60vh] flex items-center justify-center" style="background-image: url('{{ url_for('static', filename=service.hero_image) }}');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10 text-center text-white" data-aos="fade-up">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ service.hero_title }}</h1>
+        <p class="text-xl md:text-2xl">{{ service.hero_subtitle }}</p>
+    </div>
+</header>
+
+<main class="py-12">
+    <section class="container mx-auto px-4 mb-16" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-4 text-center">{{ service.intro_title }}</h2>
+        <p class="text-lg text-center max-w-4xl mx-auto">{{ service.intro_text }}</p>
+    </section>
+
+    <section class="bg-gray-100 py-16" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Our {{ service.title }} Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% for item in service.service_items %}
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <i class="{{ item.icon }} text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">{{ item.title }}</h3>
+                    <p>{{ item.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-4 py-16" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-8 text-center">Our {{ service.title }} Process</h2>
+        <div class="flex flex-col md:flex-row justify-between">
+            {% for step in service.process_steps %}
+            <div class="flex-1 text-center mb-8 md:mb-0">
+                <div class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">{{ loop.index }}</div>
+                <h3 class="text-xl font-semibold mb-2">{{ step.title }}</h3>
+                <p>{{ step.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="bg-green-600 text-white py-16" data-aos="zoom-in">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">{{ service.cta_title }}</h2>
+            <p class="text-xl mb-8">{{ service.cta_text }}</p>
+            <a href="{{ url_for('contact') }}" class="bg-white text-green-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-green-100 transition duration-300">{{ service.cta_button_text }}</a>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-4 py-16" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {% for faq in service.faqs %}
+            <div class="bg-gray-100 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-2 text-green-800">{{ faq.question }}</h3>
+                <p>{{ faq.answer }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .shadow-text {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+</style>
+{% endblock %}

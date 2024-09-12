@@ -1,0 +1,516 @@
+{
+    "lawn_care": {
+      "title": "Lawn Care Services",
+      "hero_image": "images/lawn-care-hero.jpg",
+      "hero_title": "Expert Lawn Care Services",
+      "hero_subtitle": "Cultivating lush, healthy lawns for your outdoor paradise",
+      "intro_title": "Transform Your Lawn",
+      "intro_text": "At Green Thumb Landscaping, we understand that a vibrant, well-maintained lawn is the cornerstone of a beautiful landscape. Our expert lawn care services are designed to nurture your grass, combat weeds, and create a lush, green carpet that enhances your property's beauty and value.",
+      "service_items": [
+        {
+          "icon": "fas fa-cut",
+          "title": "Precision Mowing",
+          "description": "Regular, precise mowing to maintain optimal grass height and promote healthy growth."
+        },
+        {
+          "icon": "fas fa-seedling",
+          "title": "Fertilization",
+          "description": "Customized fertilization programs to provide essential nutrients for a lush, green lawn."
+        },
+        {
+          "icon": "fas fa-bug",
+          "title": "Pest Control",
+          "description": "Effective, eco-friendly solutions to protect your lawn from harmful insects and diseases."
+        },
+        {
+          "icon": "fas fa-tint",
+          "title": "Irrigation Management",
+          "description": "Efficient watering strategies to ensure your lawn receives the right amount of hydration."
+        },
+        {
+          "icon": "fas fa-leaf",
+          "title": "Aeration & Overseeding",
+          "description": "Improve soil health and grass density through strategic aeration and overseeding techniques."
+        },
+        {
+          "icon": "fas fa-recycle",
+          "title": "Eco-Friendly Practices",
+          "description": "Sustainable lawn care methods that protect the environment while beautifying your property."
+        }
+      ],
+      "process_steps": [
+        {
+          "title": "Assessment",
+          "description": "We thoroughly evaluate your lawn's current condition, soil type, and specific needs."
+        },
+        {
+          "title": "Customized Plan",
+          "description": "Our experts develop a tailored lawn care program to address your lawn's unique requirements."
+        },
+        {
+          "title": "Implementation",
+          "description": "We execute the plan with precision, using state-of-the-art equipment and eco-friendly products."
+        },
+        {
+          "title": "Monitoring",
+          "description": "Regular check-ups ensure your lawn's health and allow us to make necessary adjustments."
+        }
+      ],
+      "cta_title": "Ready for a Lush, Healthy Lawn?",
+      "cta_text": "Contact us today to schedule a free lawn assessment and consultation.",
+      "cta_button_text": "Get Your Free Quote",
+      "faqs": [
+        {
+          "question": "How often should I mow my lawn?",
+          "answer": "The frequency of mowing depends on your grass type and growing conditions. Generally, mowing once a week during the growing season is recommended."
+        },
+        {
+          "question": "What's the best time to fertilize my lawn?",
+          "answer": "The optimal time for fertilization varies by region and grass type. We typically recommend fertilizing in early spring, late spring, and fall for most lawns."
+        },
+        {
+          "question": "How can I prevent weeds in my lawn?",
+          "answer": "Regular mowing, proper watering, and maintaining a healthy, dense lawn are key to preventing weeds. We also offer targeted weed control treatments as part of our lawn care services."
+        },
+        {
+          "question": "Do you use eco-friendly products?",
+          "answer": "Yes, we prioritize the use of environmentally friendly products and practices in all our lawn care services to protect both your lawn and the environment."
+        },
+        {
+          "question": "How often should I water my lawn?",
+          "answer": "Watering frequency depends on various factors including climate, grass type, and soil conditions. Generally, deep, infrequent watering (1-2 times per week) is better than frequent, shallow watering."
+        },
+        {
+          "question": "Can you help with lawn pest infestations?",
+          "answer": "Absolutely. We offer comprehensive pest control services to identify and treat various lawn pests, using methods that are effective and safe for your family and pets."
+        }
+      ]
+    },
+    "hardscaping": {
+      "title": "Hardscaping Services",
+      "hero_image": "images/hardscaping-hero.jpg",
+      "hero_title": "Expert Hardscaping Services",
+      "hero_subtitle": "Transform your outdoor space with durable and beautiful hardscape elements",
+      "intro_title": "Elevate Your Outdoor Living",
+      "intro_text": "At Green Thumb Landscaping, we specialize in creating stunning hardscape features that enhance the functionality and aesthetic appeal of your outdoor space. Our expert hardscaping services combine innovative design with high-quality materials to create durable, low-maintenance, and visually striking elements that seamlessly integrate with your landscape.",
+      "service_items": [
+        {
+          "icon": "fas fa-umbrella-beach",
+          "title": "Patios & Decks",
+          "description": "Custom-designed outdoor living spaces for relaxation and entertainment."
+        },
+        {
+          "icon": "fas fa-road",
+          "title": "Walkways & Driveways",
+          "description": "Functional and attractive pathways using various materials and patterns."
+        },
+        {
+          "icon": "fas fa-mountain",
+          "title": "Retaining Walls",
+          "description": "Structural solutions that add visual interest and manage landscape elevation."
+        },
+        {
+          "icon": "fas fa-fire",
+          "title": "Fire Pits & Outdoor Fireplaces",
+          "description": "Cozy additions to extend your outdoor enjoyment throughout the seasons."
+        },
+        {
+          "icon": "fas fa-utensils",
+          "title": "Outdoor Kitchens",
+          "description": "Fully-equipped cooking and dining areas for the ultimate outdoor experience."
+        },
+        {
+          "icon": "fas fa-water",
+          "title": "Water Features",
+          "description": "Custom fountains, ponds, and waterfalls to add tranquility to your landscape."
+        }
+      ],
+      "process_steps": [
+        {
+          "title": "Consultation",
+          "description": "We meet to discuss your vision, needs, and budget to understand your project goals."
+        },
+        {
+          "title": "Design",
+          "description": "Our experts create a custom hardscape design tailored to your space and preferences."
+        },
+        {
+          "title": "Material Selection",
+          "description": "We help you choose the best materials for durability, aesthetics, and functionality."
+        },
+        {
+          "title": "Installation",
+          "description": "Our skilled team brings the design to life with precision and attention to detail."
+        }
+      ],
+      "cta_title": "Ready to Transform Your Outdoor Space?",
+      "cta_text": "Contact us today to schedule a free consultation and start your hardscaping project.",
+      "cta_button_text": "Get Your Free Consultation",
+      "faqs": [
+        {
+          "question": "How long does a typical hardscaping project take?",
+          "answer": "Project duration varies depending on the scope and complexity, but most projects are completed within 2-6 weeks from design approval to final installation."
+        },
+        {
+          "question": "What materials do you use for hardscaping?",
+          "answer": "We use a variety of high-quality materials including natural stone, pavers, concrete, and brick. We'll help you choose the best options for your project and budget."
+        },
+        {
+          "question": "Can hardscaping help with drainage issues?",
+          "answer": "Yes, proper hardscape design and installation can significantly improve drainage in your outdoor space, preventing water accumulation and potential damage."
+        },
+        {
+          "question": "Do you offer eco-friendly hardscaping options?",
+          "answer": "Absolutely! We offer permeable paving options and use sustainable materials when possible to minimize environmental impact."
+        },
+        {
+          "question": "How do I maintain my new hardscape features?",
+          "answer": "Most hardscape elements are low-maintenance. We provide care instructions and offer maintenance services to keep your hardscaping looking great for years to come."
+        },
+        {
+          "question": "Can you integrate hardscaping with existing landscaping?",
+          "answer": "Yes, we specialize in creating seamless transitions between hardscape elements and your existing landscape, ensuring a cohesive and beautiful outdoor space."
+        }
+      ]
+    },
+    "tree_services": {
+      "title": "Tree Services",
+      "hero_image": "images/tree-services-hero.jpg",
+      "hero_title": "Expert Tree Services",
+      "hero_subtitle": "Nurturing and maintaining the health and beauty of your trees",
+      "intro_title": "Comprehensive Tree Care Solutions",
+      "intro_text": "At Green Thumb Landscaping, we understand that trees are vital components of your landscape, providing beauty, shade, and environmental benefits. Our expert tree services are designed to maintain the health, safety, and aesthetic appeal of your trees, ensuring they thrive for years to come.",
+      "service_items": [
+        {
+          "icon": "fas fa-cut",
+          "title": "Tree Pruning",
+          "description": "Skilled pruning to improve tree health, appearance, and safety."
+        },
+        {
+          "icon": "fas fa-tree",
+          "title": "Tree Removal",
+          "description": "Safe and efficient removal of dead, diseased, or unwanted trees."
+        },
+        {
+          "icon": "fas fa-leaf",
+          "title": "Tree Health Assessment",
+          "description": "Expert diagnosis and treatment of tree diseases and pest infestations."
+        },
+        {
+          "icon": "fas fa-seedling",
+          "title": "Tree Planting",
+          "description": "Selection and planting of appropriate tree species for your landscape."
+        },
+        {
+          "icon": "fas fa-bolt",
+          "title": "Storm Damage Cleanup",
+          "description": "Swift response to storm-related tree damage and emergencies."
+        },
+        {
+          "icon": "fas fa-arrows-alt-v",
+          "title": "Stump Grinding",
+          "description": "Removal of tree stumps to clear space and prevent regrowth."
+        }
+      ],
+      "process_steps": [
+        {
+          "title": "Assessment",
+          "description": "We evaluate the health and condition of your trees and surrounding landscape."
+        },
+        {
+          "title": "Customized Plan",
+          "description": "We develop a tailored tree care plan based on your needs and our expert recommendations."
+        },
+        {
+          "title": "Service Execution",
+          "description": "Our skilled arborists perform the necessary tree care services with precision and care."
+        },
+        {
+          "title": "Follow-up Care",
+          "description": "We provide ongoing maintenance and support to ensure the long-term health of your trees."
+        }
+      ],
+      "cta_title": "Ready to Care for Your Trees?",
+      "cta_text": "Contact us today to schedule a free tree assessment and consultation.",
+      "cta_button_text": "Get Your Free Consultation",
+      "faqs": [
+        {
+          "question": "How often should trees be pruned?",
+          "answer": "The frequency of pruning depends on the tree species, age, and health. Generally, mature trees benefit from pruning every 3-5 years, while younger trees may need more frequent attention."
+        },
+        {
+          "question": "When is the best time to plant new trees?",
+          "answer": "The ideal planting time is typically in the fall or early spring when temperatures are cooler and rainfall is more frequent, giving new trees the best chance to establish strong root systems."
+        },
+        {
+          "question": "How can I tell if my tree is diseased?",
+          "answer": "Signs of tree disease include discolored or distorted leaves, premature leaf drop, bark abnormalities, fungal growth, and dead branches. If you notice any of these symptoms, it's best to consult with our arborists for a proper diagnosis."
+        },
+        {
+          "question": "Is it necessary to remove tree stumps?",
+          "answer": "While not always necessary, stump removal is recommended to prevent regrowth, eliminate trip hazards, and improve the appearance of your landscape. It also helps prevent pest infestations that can spread to healthy trees."
+        },
+        {
+          "question": "How do you ensure safety during tree removal?",
+          "answer": "Our team follows strict safety protocols, uses professional-grade equipment, and employs advanced techniques to ensure safe tree removal. We also carry comprehensive insurance for your peace of mind."
+        },
+        {
+          "question": "Can you help with emergency tree services?",
+          "answer": "Yes, we offer 24/7 emergency tree services for situations like storm damage or fallen trees. Our rapid response team is equipped to handle urgent tree care needs safely and efficiently."
+        }
+      ]
+    },
+    "garden_design": {
+      "title": "Garden Design Services",
+      "hero_image": "images/garden-design-hero.jpg",
+      "hero_title": "Expert Garden Design Services",
+      "hero_subtitle": "Creating beautiful, functional outdoor spaces tailored to your vision",
+      "intro_title": "Transform Your Outdoor Space",
+      "intro_text": "At Green Edge Landscaping, we believe that a well-designed garden is an extension of your home and personality. Our expert garden design services combine creativity, horticultural knowledge, and sustainable practices to create stunning outdoor spaces that reflect your style and enhance your property's beauty and value.",
+      "service_items": [
+        {
+          "icon": "fas fa-pencil-ruler",
+          "title": "Custom Design",
+          "description": "Tailored garden designs that reflect your style and meet your specific needs."
+        },
+        {
+          "icon": "fas fa-leaf",
+          "title": "Plant Selection",
+          "description": "Expert choice of plants suited to your local climate and garden conditions."
+        },
+        {
+          "icon": "fas fa-recycle",
+          "title": "Sustainable Practices",
+          "description": "Eco-friendly design solutions that conserve water and support local ecosystems."
+        },
+        {
+          "icon": "fas fa-tree",
+          "title": "Landscape Planning",
+          "description": "Comprehensive landscape plans including hardscaping and water features."
+        },
+        {
+          "icon": "fas fa-seedling",
+          "title": "Installation",
+          "description": "Professional installation of your new garden design with attention to detail."
+        },
+        {
+          "icon": "fas fa-hand-holding-water",
+          "title": "Maintenance Plans",
+          "description": "Ongoing care strategies to keep your garden beautiful throughout the seasons."
+        }
+      ],
+      "process_steps": [
+        {
+          "title": "Consultation",
+          "description": "We meet to discuss your vision, preferences, and requirements for your ideal garden."
+        },
+        {
+          "title": "Site Analysis",
+          "description": "Our experts evaluate your property's conditions, including soil, sunlight, and existing features."
+        },
+        {
+          "title": "Design Creation",
+          "description": "We create a custom design plan, incorporating your ideas and our professional expertise."
+        },
+        {
+          "title": "Implementation",
+          "description": "Our skilled team brings the design to life, transforming your outdoor space."
+        }
+      ],
+      "cta_title": "Ready to Create Your Dream Garden?",
+      "cta_text": "Contact us today to schedule a free consultation and start your garden transformation journey.",
+      "cta_button_text": "Get Your Free Consultation",
+      "faqs": [
+        {
+          "question": "How long does the garden design process take?",
+          "answer": "The duration varies depending on the project's complexity, but typically ranges from 2-6 weeks for design creation, followed by implementation."
+        },
+        {
+          "question": "Can you work with my existing landscape?",
+          "answer": "Absolutely! We can incorporate existing elements into new designs or refresh your current landscape to enhance its beauty and functionality."
+        },
+        {
+          "question": "Do you offer eco-friendly garden designs?",
+          "answer": "Yes, we prioritize sustainable practices in our designs, including native plant selection, water-efficient irrigation, and environmentally friendly materials."
+        },
+        {
+          "question": "What if I don't know much about plants?",
+          "answer": "Our experts will guide you through plant selection, considering your preferences, maintenance requirements, and local climate to ensure a thriving garden."
+        },
+        {
+          "question": "Can you help with small garden spaces?",
+          "answer": "Definitely! We specialize in maximizing the potential of gardens of all sizes, creating beautiful and functional spaces even in compact areas."
+        },
+        {
+          "question": "Do you provide ongoing maintenance after installation?",
+          "answer": "Yes, we offer maintenance plans to keep your new garden looking its best. We can tailor these services to your specific needs and schedule."
+        }
+      ]
+    },
+    "irrigation_systems": {
+      "title": "Irrigation System Services",
+      "hero_image": "images/irrigation-hero.jpg",
+      "hero_title": "Expert Irrigation System Services",
+      "hero_subtitle": "Efficient watering solutions for a thriving, sustainable landscape",
+      "intro_title": "Smart Watering for Healthy Landscapes",
+      "intro_text": "At Green Thumb Landscaping, we understand that a well-designed irrigation system is crucial for maintaining a lush, healthy landscape while conserving water. Our expert irrigation services combine cutting-Thumb technology with sustainable practices to deliver efficient, customized watering solutions for your outdoor space.",
+      "service_items": [
+        {
+          "icon": "fas fa-drafting-compass",
+          "title": "Custom Design",
+          "description": "Tailored irrigation plans to meet your landscape's specific watering needs."
+        },
+        {
+          "icon": "fas fa-tools",
+          "title": "Professional Installation",
+          "description": "Expert installation of high-quality irrigation components for optimal performance."
+        },
+        {
+          "icon": "fas fa-cogs",
+          "title": "System Maintenance",
+          "description": "Regular check-ups and maintenance to ensure your system operates at peak efficiency."
+        },
+        {
+          "icon": "fas fa-wrench",
+          "title": "Repairs & Upgrades",
+          "description": "Swift resolution of issues and system upgrades to improve performance."
+        },
+        {
+          "icon": "fas fa-tint",
+          "title": "Water Conservation",
+          "description": "Implementation of water-saving technologies and practices."
+        },
+        {
+          "icon": "fas fa-mobile-alt",
+          "title": "Smart Irrigation Control",
+          "description": "Integration of smart controllers for remote management and weather-based adjustments."
+        }
+      ],
+      "process_steps": [
+        {
+          "title": "Site Evaluation",
+          "description": "We assess your landscape's watering needs, soil type, and microclimates."
+        },
+        {
+          "title": "System Design",
+          "description": "Our experts create a custom irrigation plan tailored to your landscape."
+        },
+        {
+          "title": "Installation",
+          "description": "We install your system with precision, ensuring optimal coverage and efficiency."
+        },
+        {
+          "title": "Fine-tuning & Education",
+          "description": "We adjust the system and provide guidance on its operation and maintenance."
+        }
+      ],
+      "cta_title": "Ready for an Efficient Irrigation System?",
+      "cta_text": "Contact us today to schedule a free consultation and start optimizing your landscape's watering.",
+      "cta_button_text": "Get Your Free Consultation",
+      "faqs": [
+        {
+          "question": "How much water can I save with a proper irrigation system?",
+          "answer": "A well-designed, smart irrigation system can reduce water usage by 30-50% compared to manual watering, while maintaining a healthier landscape."
+        },
+        {
+          "question": "How often should I have my irrigation system serviced?",
+          "answer": "We recommend a professional check-up at least twice a year - in spring to ensure proper startup, and in fall to prepare for winter."
+        },
+        {
+          "question": "Can you upgrade my existing irrigation system?",
+          "answer": "Yes, we can assess your current system and recommend upgrades to improve efficiency, such as adding smart controllers or replacing outdated components."
+        },
+        {
+          "question": "Are your irrigation systems environmentally friendly?",
+          "answer": "Absolutely. We prioritize water conservation and use EPA WaterSense certified products when possible to ensure environmental responsibility."
+        },
+        {
+          "question": "How long does it take to install an irrigation system?",
+          "answer": "Installation time varies depending on the size and complexity of your landscape, but most residential systems can be installed in 1-3 days."
+        },
+        {
+          "question": "Can irrigation systems be used for both residential and commercial properties?",
+          "answer": "Yes, we design and install irrigation systems for properties of all sizes, from small residential gardens to large commercial landscapes."
+        }
+      ]
+    },
+    "landscaping_maintenance": {
+      "title": "Landscaping Maintenance Services",
+      "hero_image": "images/landscaping-maintenance-hero.jpg",
+      "hero_title": "Expert Landscaping Maintenance",
+      "hero_subtitle": "Keep your outdoor spaces beautiful and thriving year-round",
+      "intro_title": "Professional Landscape Care",
+      "intro_text": "At Green Thumb Landscaping, we understand that maintaining a beautiful landscape requires ongoing care and expertise. Our comprehensive landscaping maintenance services are designed to preserve and enhance the beauty of your outdoor environment. With our team of skilled professionals and commitment to excellence, we ensure your landscape remains healthy, vibrant, and well-manicured throughout every season.",
+      "service_items": [
+        {
+          "icon": "fas fa-cut",
+          "title": "Regular Lawn Care",
+          "description": "Professional mowing, trimming, and edging for a pristine lawn."
+        },
+        {
+          "icon": "fas fa-leaf",
+          "title": "Plant & Shrub Care",
+          "description": "Expert pruning and trimming to promote healthy plant growth."
+        },
+        {
+          "icon": "fas fa-tint",
+          "title": "Irrigation Management",
+          "description": "Regular checks and adjustments for efficient watering systems."
+        },
+        {
+          "icon": "fas fa-seedling",
+          "title": "Seasonal Clean-ups",
+          "description": "Comprehensive spring and fall services to prepare your landscape."
+        },
+        {
+          "icon": "fas fa-bug",
+          "title": "Pest Control",
+          "description": "Safe and effective pest management for plant and lawn health."
+        },
+        {
+          "icon": "fas fa-recycle",
+          "title": "Green Waste Management",
+          "description": "Responsible disposal and recycling of landscaping debris."
+        }
+      ],
+      "process_steps": [
+        {
+          "title": "Initial Assessment",
+          "description": "We thoroughly evaluate your landscape's current condition and unique needs."
+        },
+        {
+          "title": "Custom Plan Creation",
+          "description": "Our experts develop a tailored maintenance plan suited for your property."
+        },
+        {
+          "title": "Regular Service",
+          "description": "We implement consistent maintenance visits to keep your landscape pristine."
+        },
+        {
+          "title": "Ongoing Monitoring",
+          "description": "We continuously monitor your landscape's health and adjust our plan as needed."
+        }
+      ],
+      "cta_title": "Ready for Expert Landscape Maintenance?",
+      "cta_text": "Contact us today to schedule a consultation and create your personalized maintenance plan!",
+      "cta_button_text": "Get Your Free Quote",
+      "faqs": [
+        {
+          "question": "How often will maintenance be performed?",
+          "answer": "Maintenance frequency varies depending on your specific needs and landscape complexity. We offer weekly, bi-weekly, and monthly maintenance plans."
+        },
+        {
+          "question": "What is included in seasonal clean-ups?",
+          "answer": "Seasonal clean-ups typically include leaf removal, pruning, mulching, and preparing planting beds for the upcoming season."
+        },
+        {
+          "question": "Do you offer commercial landscaping maintenance?",
+          "answer": "Yes, we provide maintenance services for both residential and commercial properties, tailored to each client's specific requirements."
+        },
+        {
+          "question": "Are your maintenance practices environmentally friendly?",
+          "answer": "Absolutely! We prioritize eco-friendly products and practices, incorporating sustainable techniques whenever possible."
+        }
+      ]
+    }
+  }
