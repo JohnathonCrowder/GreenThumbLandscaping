@@ -1,5 +1,6 @@
-from flask import render_template
+from flask import render_template, abort
 from app import app
+import os
 import json
 
 
@@ -11,28 +12,32 @@ def index():
 def services():
     return render_template('services.html', title='Our Services')
 
-@app.route('/services/<service_name>')
 def service(service_name):
-    with open('services.json', 'r') as f:
-        services = json.load(f)
-    
-    if service_name in services:
-        service_info = services[service_name]
-        return render_template('services_template.html', service=service_info)
-    else:
+    json_file = os.path.join('services', f'{service_name}.json')
+    try:
+        with open(json_file, 'r') as f:
+            service_data = json.load(f)
+    except FileNotFoundError:
         abort(404)
+    return render_template('services_template.html', service=service_data)
+
+@app.route('/services/<service_name>')
+def service_route(service_name):
+    return service(service_name)
 
 @app.route('/services/lawn-care')
 def lawn_care():
-    return service('lawn_care')
+    return service_route('lawn_care')
+
+@app.route('/services/hardscaping')
+def hardscaping():
+    return service_route('hardscaping')
 
 @app.route('/services/garden-design')
 def garden_design():
     return service('garden_design')
 
-@app.route('/services/hardscaping')
-def hardscaping():
-    return service('hardscaping')
+
 
 @app.route('/services/irrigation-systems')
 def irrigation_systems():

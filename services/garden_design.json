@@ -1,0 +1,87 @@
+{
+    "title": "Garden Design Services",
+    "hero_image": "images/garden-design-hero.jpg",
+    "hero_title": "Expert Garden Design Services",
+    "hero_subtitle": "Creating beautiful, functional outdoor spaces tailored to your vision",
+    "intro_title": "Transform Your Outdoor Space",
+    "intro_text": "At Green Edge Landscaping, we believe that a well-designed garden is an extension of your home and personality. Our expert garden design services combine creativity, horticultural knowledge, and sustainable practices to create stunning outdoor spaces that reflect your style and enhance your property's beauty and value.",
+    "service_items": [
+      {
+        "icon": "fas fa-pencil-ruler",
+        "title": "Custom Design",
+        "description": "Tailored garden designs that reflect your style and meet your specific needs."
+      },
+      {
+        "icon": "fas fa-leaf",
+        "title": "Plant Selection",
+        "description": "Expert choice of plants suited to your local climate and garden conditions."
+      },
+      {
+        "icon": "fas fa-recycle",
+        "title": "Sustainable Practices",
+        "description": "Eco-friendly design solutions that conserve water and support local ecosystems."
+      },
+      {
+        "icon": "fas fa-tree",
+        "title": "Landscape Planning",
+        "description": "Comprehensive landscape plans including hardscaping and water features."
+      },
+      {
+        "icon": "fas fa-seedling",
+        "title": "Installation",
+        "description": "Professional installation of your new garden design with attention to detail."
+      },
+      {
+        "icon": "fas fa-hand-holding-water",
+        "title": "Maintenance Plans",
+        "description": "Ongoing care strategies to keep your garden beautiful throughout the seasons."
+      }
+    ],
+    "process_steps": [
+      {
+        "title": "Consultation",
+        "description": "We meet to discuss your vision, preferences, and requirements for your ideal garden."
+      },
+      {
+        "title": "Site Analysis",
+        "description": "Our experts evaluate your property's conditions, including soil, sunlight, and existing features."
+      },
+      {
+        "title": "Design Creation",
+        "description": "We create a custom design plan, incorporating your ideas and our professional expertise."
+      },
+      {
+        "title": "Implementation",
+        "description": "Our skilled team brings the design to life, transforming your outdoor space."
+      }
+    ],
+    "cta_title": "Ready to Create Your Dream Garden?",
+    "cta_text": "Contact us today to schedule a free consultation and start your garden transformation journey.",
+    "cta_button_text": "Get Your Free Consultation",
+    "faqs": [
+      {
+        "question": "How long does the garden design process take?",
+        "answer": "The duration varies depending on the project's complexity, but typically ranges from 2-6 weeks for design creation, followed by implementation."
+      },
+      {
+        "question": "Can you work with my existing landscape?",
+        "answer": "Absolutely! We can incorporate existing elements into new designs or refresh your current landscape to enhance its beauty and functionality."
+      },
+      {
+        "question": "Do you offer eco-friendly garden designs?",
+        "answer": "Yes, we prioritize sustainable practices in our designs, including native plant selection, water-efficient irrigation, and environmentally friendly materials."
+      },
+      {
+        "question": "What if I don't know much about plants?",
+        "answer": "Our experts will guide you through plant selection, considering your preferences, maintenance requirements, and local climate to ensure a thriving garden."
+      },
+      {
+        "question": "Can you help with small garden spaces?",
+        "answer": "Definitely! We specialize in maximizing the potential of gardens of all sizes, creating beautiful and functional spaces even in compact areas."
+      },
+      {
+        "question": "Do you provide ongoing maintenance after installation?",
+        "answer": "Yes, we offer maintenance plans to keep your new garden looking its best. We can tailor these services to your specific needs and schedule."
+      }
+    ]
+  }

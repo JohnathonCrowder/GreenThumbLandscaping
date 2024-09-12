@@ -1,0 +1,87 @@
+{
+    "title": "Lawn Care Services",
+    "hero_image": "images/lawn-care-hero.jpg",
+    "hero_title": "Expert Lawn Care Services",
+    "hero_subtitle": "Cultivating lush, healthy lawns for your outdoor paradise",
+    "intro_title": "Transform Your Lawn",
+    "intro_text": "At Green Thumb Landscaping, we understand that a vibrant, well-maintained lawn is the cornerstone of a beautiful landscape. Our expert lawn care services are designed to nurture your grass, combat weeds, and create a lush, green carpet that enhances your property's beauty and value.",
+    "service_items": [
+      {
+        "icon": "fas fa-cut",
+        "title": "Precision Mowing",
+        "description": "Regular, precise mowing to maintain optimal grass height and promote healthy growth."
+      },
+      {
+        "icon": "fas fa-seedling",
+        "title": "Fertilization",
+        "description": "Customized fertilization programs to provide essential nutrients for a lush, green lawn."
+      },
+      {
+        "icon": "fas fa-bug",
+        "title": "Pest Control",
+        "description": "Effective, eco-friendly solutions to protect your lawn from harmful insects and diseases."
+      },
+      {
+        "icon": "fas fa-tint",
+        "title": "Irrigation Management",
+        "description": "Efficient watering strategies to ensure your lawn receives the right amount of hydration."
+      },
+      {
+        "icon": "fas fa-leaf",
+        "title": "Aeration & Overseeding",
+        "description": "Improve soil health and grass density through strategic aeration and overseeding techniques."
+      },
+      {
+        "icon": "fas fa-recycle",
+        "title": "Eco-Friendly Practices",
+        "description": "Sustainable lawn care methods that protect the environment while beautifying your property."
+      }
+    ],
+    "process_steps": [
+      {
+        "title": "Assessment",
+        "description": "We thoroughly evaluate your lawn's current condition, soil type, and specific needs."
+      },
+      {
+        "title": "Customized Plan",
+        "description": "Our experts develop a tailored lawn care program to address your lawn's unique requirements."
+      },
+      {
+        "title": "Implementation",
+        "description": "We execute the plan with precision, using state-of-the-art equipment and eco-friendly products."
+      },
+      {
+        "title": "Monitoring",
+        "description": "Regular check-ups ensure your lawn's health and allow us to make necessary adjustments."
+      }
+    ],
+    "cta_title": "Ready for a Lush, Healthy Lawn?",
+    "cta_text": "Contact us today to schedule a free lawn assessment and consultation.",
+    "cta_button_text": "Get Your Free Quote",
+    "faqs": [
+      {
+        "question": "How often should I mow my lawn?",
+        "answer": "The frequency of mowing depends on your grass type and growing conditions. Generally, mowing once a week during the growing season is recommended."
+      },
+      {
+        "question": "What's the best time to fertilize my lawn?",
+        "answer": "The optimal time for fertilization varies by region and grass type. We typically recommend fertilizing in early spring, late spring, and fall for most lawns."
+      },
+      {
+        "question": "How can I prevent weeds in my lawn?",
+        "answer": "Regular mowing, proper watering, and maintaining a healthy, dense lawn are key to preventing weeds. We also offer targeted weed control treatments as part of our lawn care services."
+      },
+      {
+        "question": "Do you use eco-friendly products?",
+        "answer": "Yes, we prioritize the use of environmentally friendly products and practices in all our lawn care services to protect both your lawn and the environment."
+      },
+      {
+        "question": "How often should I water my lawn?",
+        "answer": "Watering frequency depends on various factors including climate, grass type, and soil conditions. Generally, deep, infrequent watering (1-2 times per week) is better than frequent, shallow watering."
+      },
+      {
+        "question": "Can you help with lawn pest infestations?",
+        "answer": "Absolutely. We offer comprehensive pest control services to identify and treat various lawn pests, using methods that are effective and safe for your family and pets."
+      }
+    ]
+  }

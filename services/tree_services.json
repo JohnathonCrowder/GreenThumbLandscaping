@@ -1,0 +1,87 @@
+{
+    "title": "Tree Services",
+    "hero_image": "images/tree-services-hero.jpg",
+    "hero_title": "Expert Tree Services",
+    "hero_subtitle": "Nurturing and maintaining the health and beauty of your trees",
+    "intro_title": "Comprehensive Tree Care Solutions",
+    "intro_text": "At Green Thumb Landscaping, we understand that trees are vital components of your landscape, providing beauty, shade, and environmental benefits. Our expert tree services are designed to maintain the health, safety, and aesthetic appeal of your trees, ensuring they thrive for years to come.",
+    "service_items": [
+      {
+        "icon": "fas fa-cut",
+        "title": "Tree Pruning",
+        "description": "Skilled pruning to improve tree health, appearance, and safety."
+      },
+      {
+        "icon": "fas fa-tree",
+        "title": "Tree Removal",
+        "description": "Safe and efficient removal of dead, diseased, or unwanted trees."
+      },
+      {
+        "icon": "fas fa-leaf",
+        "title": "Tree Health Assessment",
+        "description": "Expert diagnosis and treatment of tree diseases and pest infestations."
+      },
+      {
+        "icon": "fas fa-seedling",
+        "title": "Tree Planting",
+        "description": "Selection and planting of appropriate tree species for your landscape."
+      },
+      {
+        "icon": "fas fa-bolt",
+        "title": "Storm Damage Cleanup",
+        "description": "Swift response to storm-related tree damage and emergencies."
+      },
+      {
+        "icon": "fas fa-arrows-alt-v",
+        "title": "Stump Grinding",
+        "description": "Removal of tree stumps to clear space and prevent regrowth."
+      }
+    ],
+    "process_steps": [
+      {
+        "title": "Assessment",
+        "description": "We evaluate the health and condition of your trees and surrounding landscape."
+      },
+      {
+        "title": "Customized Plan",
+        "description": "We develop a tailored tree care plan based on your needs and our expert recommendations."
+      },
+      {
+        "title": "Service Execution",
+        "description": "Our skilled arborists perform the necessary tree care services with precision and care."
+      },
+      {
+        "title": "Follow-up Care",
+        "description": "We provide ongoing maintenance and support to ensure the long-term health of your trees."
+      }
+    ],
+    "cta_title": "Ready to Care for Your Trees?",
+    "cta_text": "Contact us today to schedule a free tree assessment and consultation.",
+    "cta_button_text": "Get Your Free Consultation",
+    "faqs": [
+      {
+        "question": "How often should trees be pruned?",
+        "answer": "The frequency of pruning depends on the tree species, age, and health. Generally, mature trees benefit from pruning every 3-5 years, while younger trees may need more frequent attention."
+      },
+      {
+        "question": "When is the best time to plant new trees?",
+        "answer": "The ideal planting time is typically in the fall or early spring when temperatures are cooler and rainfall is more frequent, giving new trees the best chance to establish strong root systems."
+      },
+      {
+        "question": "How can I tell if my tree is diseased?",
+        "answer": "Signs of tree disease include discolored or distorted leaves, premature leaf drop, bark abnormalities, fungal growth, and dead branches. If you notice any of these symptoms, it's best to consult with our arborists for a proper diagnosis."
+      },
+      {
+        "question": "Is it necessary to remove tree stumps?",
+        "answer": "While not always necessary, stump removal is recommended to prevent regrowth, eliminate trip hazards, and improve the appearance of your landscape. It also helps prevent pest infestations that can spread to healthy trees."
+      },
+      {
+        "question": "How do you ensure safety during tree removal?",
+        "answer": "Our team follows strict safety protocols, uses professional-grade equipment, and employs advanced techniques to ensure safe tree removal. We also carry comprehensive insurance for your peace of mind."
+      },
+      {
+        "question": "Can you help with emergency tree services?",
+        "answer": "Yes, we offer 24/7 emergency tree services for situations like storm damage or fallen trees. Our rapid response team is equipped to handle urgent tree care needs safely and efficiently."
+      }
+    ]
+  }

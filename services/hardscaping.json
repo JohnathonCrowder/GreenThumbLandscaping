@@ -1,0 +1,87 @@
+{
+    "title": "Hardscaping Services",
+    "hero_image": "images/hardscaping-hero.jpg",
+    "hero_title": "Expert Hardscaping Services",
+    "hero_subtitle": "Transform your outdoor space with durable and beautiful hardscape elements",
+    "intro_title": "Elevate Your Outdoor Living",
+    "intro_text": "At Green Thumb Landscaping, we specialize in creating stunning hardscape features that enhance the functionality and aesthetic appeal of your outdoor space. Our expert hardscaping services combine innovative design with high-quality materials to create durable, low-maintenance, and visually striking elements that seamlessly integrate with your landscape.",
+    "service_items": [
+      {
+        "icon": "fas fa-umbrella-beach",
+        "title": "Patios & Decks",
+        "description": "Custom-designed outdoor living spaces for relaxation and entertainment."
+      },
+      {
+        "icon": "fas fa-road",
+        "title": "Walkways & Driveways",
+        "description": "Functional and attractive pathways using various materials and patterns."
+      },
+      {
+        "icon": "fas fa-mountain",
+        "title": "Retaining Walls",
+        "description": "Structural solutions that add visual interest and manage landscape elevation."
+      },
+      {
+        "icon": "fas fa-fire",
+        "title": "Fire Pits & Outdoor Fireplaces",
+        "description": "Cozy additions to extend your outdoor enjoyment throughout the seasons."
+      },
+      {
+        "icon": "fas fa-utensils",
+        "title": "Outdoor Kitchens",
+        "description": "Fully-equipped cooking and dining areas for the ultimate outdoor experience."
+      },
+      {
+        "icon": "fas fa-water",
+        "title": "Water Features",
+        "description": "Custom fountains, ponds, and waterfalls to add tranquility to your landscape."
+      }
+    ],
+    "process_steps": [
+      {
+        "title": "Consultation",
+        "description": "We meet to discuss your vision, needs, and budget to understand your project goals."
+      },
+      {
+        "title": "Design",
+        "description": "Our experts create a custom hardscape design tailored to your space and preferences."
+      },
+      {
+        "title": "Material Selection",
+        "description": "We help you choose the best materials for durability, aesthetics, and functionality."
+      },
+      {
+        "title": "Installation",
+        "description": "Our skilled team brings the design to life with precision and attention to detail."
+      }
+    ],
+    "cta_title": "Ready to Transform Your Outdoor Space?",
+    "cta_text": "Contact us today to schedule a free consultation and start your hardscaping project.",
+    "cta_button_text": "Get Your Free Consultation",
+    "faqs": [
+      {
+        "question": "How long does a typical hardscaping project take?",
+        "answer": "Project duration varies depending on the scope and complexity, but most projects are completed within 2-6 weeks from design approval to final installation."
+      },
+      {
+        "question": "What materials do you use for hardscaping?",
+        "answer": "We use a variety of high-quality materials including natural stone, pavers, concrete, and brick. We'll help you choose the best options for your project and budget."
+      },
+      {
+        "question": "Can hardscaping help with drainage issues?",
+        "answer": "Yes, proper hardscape design and installation can significantly improve drainage in your outdoor space, preventing water accumulation and potential damage."
+      },
+      {
+        "question": "Do you offer eco-friendly hardscaping options?",
+        "answer": "Absolutely! We offer permeable paving options and use sustainable materials when possible to minimize environmental impact."
+      },
+      {
+        "question": "How do I maintain my new hardscape features?",
+        "answer": "Most hardscape elements are low-maintenance. We provide care instructions and offer maintenance services to keep your hardscaping looking great for years to come."
+      },
+      {
+        "question": "Can you integrate hardscaping with existing landscaping?",
+        "answer": "Yes, we specialize in creating seamless transitions between hardscape elements and your existing landscape, ensuring a cohesive and beautiful outdoor space."
+      }
+    ]
+  }

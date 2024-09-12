@@ -1,0 +1,79 @@
+{
+    "title": "Landscaping Maintenance Services",
+    "hero_image": "images/landscaping-maintenance-hero.jpg",
+    "hero_title": "Expert Landscaping Maintenance",
+    "hero_subtitle": "Keep your outdoor spaces beautiful and thriving year-round",
+    "intro_title": "Professional Landscape Care",
+    "intro_text": "At Green Thumb Landscaping, we understand that maintaining a beautiful landscape requires ongoing care and expertise. Our comprehensive landscaping maintenance services are designed to preserve and enhance the beauty of your outdoor environment. With our team of skilled professionals and commitment to excellence, we ensure your landscape remains healthy, vibrant, and well-manicured throughout every season.",
+    "service_items": [
+      {
+        "icon": "fas fa-cut",
+        "title": "Regular Lawn Care",
+        "description": "Professional mowing, trimming, and edging for a pristine lawn."
+      },
+      {
+        "icon": "fas fa-leaf",
+        "title": "Plant & Shrub Care",
+        "description": "Expert pruning and trimming to promote healthy plant growth."
+      },
+      {
+        "icon": "fas fa-tint",
+        "title": "Irrigation Management",
+        "description": "Regular checks and adjustments for efficient watering systems."
+      },
+      {
+        "icon": "fas fa-seedling",
+        "title": "Seasonal Clean-ups",
+        "description": "Comprehensive spring and fall services to prepare your landscape."
+      },
+      {
+        "icon": "fas fa-bug",
+        "title": "Pest Control",
+        "description": "Safe and effective pest management for plant and lawn health."
+      },
+      {
+        "icon": "fas fa-recycle",
+        "title": "Green Waste Management",
+        "description": "Responsible disposal and recycling of landscaping debris."
+      }
+    ],
+    "process_steps": [
+      {
+        "title": "Initial Assessment",
+        "description": "We thoroughly evaluate your landscape's current condition and unique needs."
+      },
+      {
+        "title": "Custom Plan Creation",
+        "description": "Our experts develop a tailored maintenance plan suited for your property."
+      },
+      {
+        "title": "Regular Service",
+        "description": "We implement consistent maintenance visits to keep your landscape pristine."
+      },
+      {
+        "title": "Ongoing Monitoring",
+        "description": "We continuously monitor your landscape's health and adjust our plan as needed."
+      }
+    ],
+    "cta_title": "Ready for Expert Landscape Maintenance?",
+    "cta_text": "Contact us today to schedule a consultation and create your personalized maintenance plan!",
+    "cta_button_text": "Get Your Free Quote",
+    "faqs": [
+      {
+        "question": "How often will maintenance be performed?",
+        "answer": "Maintenance frequency varies depending on your specific needs and landscape complexity. We offer weekly, bi-weekly, and monthly maintenance plans."
+      },
+      {
+        "question": "What is included in seasonal clean-ups?",
+        "answer": "Seasonal clean-ups typically include leaf removal, pruning, mulching, and preparing planting beds for the upcoming season."
+      },
+      {
+        "question": "Do you offer commercial landscaping maintenance?",
+        "answer": "Yes, we provide maintenance services for both residential and commercial properties, tailored to each client's specific requirements."
+      },
+      {
+        "question": "Are your maintenance practices environmentally friendly?",
+        "answer": "Absolutely! We prioritize eco-friendly products and practices, incorporating sustainable techniques whenever possible."
+      }
+    ]
+  }
