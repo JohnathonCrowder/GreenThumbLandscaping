@@ -3,115 +3,110 @@
 {% block title %}Landscaping Maintenance Services - Green Thumb Landscaping{% endblock %}
 
 {% block content %}
-<header class="hero service-hero">
-    <div class="hero-content" data-aos="fade-up">
-        <h1>Expert Landscaping Maintenance</h1>
-        <p>Keep your outdoor spaces beautiful and thriving year-round</p>
+<header class="relative bg-cover bg-center bg-fixed h-screen flex items-center justify-center text-white" style="background-image: url('{{ url_for('static', filename='images/landscaping-maintenance-hero.jpg') }}');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10 max-w-3xl p-8 rounded-lg bg-black bg-opacity-60 text-center" data-aos="fade-up">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 shadow-text">Expert Landscaping Maintenance</h1>
+        <p class="text-xl md:text-2xl">Keep your outdoor spaces beautiful and thriving year-round</p>
     </div>
 </header>
 
-<main class="service-page landscaping-maintenance-page">
-    <section class="service-intro" data-aos="fade-up">
-        <div class="container">
-            <h2>Professional Landscape Care</h2>
-            <p>At Green Thumb Landscaping, we understand that maintaining a beautiful landscape requires ongoing care and expertise. Our comprehensive landscaping maintenance services are designed to preserve and enhance the beauty of your outdoor environment. With our team of skilled professionals and commitment to excellence, we ensure your landscape remains healthy, vibrant, and well-manicured throughout every season.</p>
-        </div>
+<main class="py-12">
+    <section class="container mx-auto px-4 mb-16" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-4 text-center">Professional Landscape Care</h2>
+        <p class="text-lg text-center max-w-4xl mx-auto">At Green Thumb Landscaping, we understand that maintaining a beautiful landscape requires ongoing care and expertise. Our comprehensive landscaping maintenance services are designed to preserve and enhance the beauty of your outdoor environment. With our team of skilled professionals and commitment to excellence, we ensure your landscape remains healthy, vibrant, and well-manicured throughout every season.</p>
     </section>
 
-    <section class="service-highlights" data-aos="fade-up">
-        <div class="container">
-            <h2>Our Maintenance Services</h2>
-            <div class="highlight-grid">
-                <div class="highlight-item">
-                    <i class="fas fa-cut"></i>
-                    <h3>Regular Lawn Care</h3>
+    <section class="bg-gray-100 py-16" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Our Maintenance Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg text-center">
+                    <i class="fas fa-cut text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Regular Lawn Care</h3>
                     <p>Professional mowing, trimming, and edging for a pristine lawn.</p>
                 </div>
-                <div class="highlight-item">
-                    <i class="fas fa-leaf"></i>
-                    <h3>Plant & Shrub Care</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg text-center">
+                    <i class="fas fa-leaf text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Plant & Shrub Care</h3>
                     <p>Expert pruning and trimming to promote healthy plant growth.</p>
                 </div>
-                <div class="highlight-item">
-                    <i class="fas fa-tint"></i>
-                    <h3>Irrigation Management</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg text-center">
+                    <i class="fas fa-tint text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Irrigation Management</h3>
                     <p>Regular checks and adjustments for efficient watering systems.</p>
                 </div>
-                <div class="highlight-item">
-                    <i class="fas fa-seedling"></i>
-                    <h3>Seasonal Clean-ups</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg text-center">
+                    <i class="fas fa-seedling text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Seasonal Clean-ups</h3>
                     <p>Comprehensive spring and fall services to prepare your landscape.</p>
                 </div>
-                <div class="highlight-item">
-                    <i class="fas fa-bug"></i>
-                    <h3>Pest Control</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg text-center">
+                    <i class="fas fa-bug text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Pest Control</h3>
                     <p>Safe and effective pest management for plant and lawn health.</p>
                 </div>
-                <div class="highlight-item">
-                    <i class="fas fa-recycle"></i>
-                    <h3>Green Waste Management</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg text-center">
+                    <i class="fas fa-recycle text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Green Waste Management</h3>
                     <p>Responsible disposal and recycling of landscaping debris.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="service-process" data-aos="fade-up">
-        <div class="container">
-            <h2>Our Maintenance Process</h2>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Initial Assessment</h3>
-                    <p>We thoroughly evaluate your landscape's current condition and unique needs.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Custom Plan Creation</h3>
-                    <p>Our experts develop a tailored maintenance plan suited for your property.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Regular Service</h3>
-                    <p>We implement consistent maintenance visits to keep your landscape pristine.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Ongoing Monitoring</h3>
-                    <p>We continuously monitor your landscape's health and adjust our plan as needed.</p>
-                </div>
+    <section class="container mx-auto px-4 py-16" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-8 text-center">Our Maintenance Process</h2>
+        <div class="flex flex-col md:flex-row justify-between">
+            <div class="flex-1 text-center mb-8 md:mb-0">
+                <div class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+                <h3 class="text-xl font-semibold mb-2">Initial Assessment</h3>
+                <p>We thoroughly evaluate your landscape's current condition and unique needs.</p>
+            </div>
+            <div class="flex-1 text-center mb-8 md:mb-0">
+                <div class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                <h3 class="text-xl font-semibold mb-2">Custom Plan Creation</h3>
+                <p>Our experts develop a tailored maintenance plan suited for your property.</p>
+            </div>
+            <div class="flex-1 text-center mb-8 md:mb-0">
+                <div class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                <h3 class="text-xl font-semibold mb-2">Regular Service</h3>
+                <p>We implement consistent maintenance visits to keep your landscape pristine.</p>
+            </div>
+            <div class="flex-1 text-center">
+                <div class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+                <h3 class="text-xl font-semibold mb-2">Ongoing Monitoring</h3>
+                <p>We continuously monitor your landscape's health and adjust our plan as needed.</p>
             </div>
         </div>
     </section>
 
-    <section class="service-cta" data-aos="zoom-in">
-        <div class="container text-center">
-            <h2>Ready for Expert Landscape Maintenance?</h2>
-            <p>Contact us today to schedule a consultation and create your personalized maintenance plan!</p>
-            <a href="{{ url_for('contact') }}" class="cta-button">Get Your Free Quote</a>
+    <section class="bg-green-600 text-white py-16" data-aos="zoom-in">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready for Expert Landscape Maintenance?</h2>
+            <p class="text-xl mb-8">Contact us today to schedule a consultation and create your personalized maintenance plan!</p>
+            <a href="{{ url_for('contact') }}" class="bg-white text-green-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-green-100 transition duration-300">Get Your Free Quote</a>
         </div>
     </section>
 
-    <section class="faq" data-aos="fade-up">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>How often will maintenance be performed?</h3>
-                    <p>Maintenance frequency varies depending on your specific needs and landscape complexity. We offer weekly, bi-weekly, and monthly maintenance plans.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What is included in seasonal clean-ups?</h3>
-                    <p>Seasonal clean-ups typically include leaf removal, pruning, mulching, and preparing planting beds for the upcoming season.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Do you offer commercial landscaping maintenance?</h3>
-                    <p>Yes, we provide maintenance services for both residential and commercial properties, tailored to each client's specific requirements.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Are your maintenance practices environmentally friendly?</h3>
-                    <p>Absolutely! We prioritize eco-friendly products and practices, incorporating sustainable techniques whenever possible.</p>
-                </div>
+    <section class="container mx-auto px-4 py-16" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gray-100 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-2 text-green-800">How often will maintenance be performed?</h3>
+                <p>Maintenance frequency varies depending on your specific needs and landscape complexity. We offer weekly, bi-weekly, and monthly maintenance plans.</p>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-2 text-green-800">What is included in seasonal clean-ups?</h3>
+                <p>Seasonal clean-ups typically include leaf removal, pruning, mulching, and preparing planting beds for the upcoming season.</p>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-2 text-green-800">Do you offer commercial landscaping maintenance?</h3>
+                <p>Yes, we provide maintenance services for both residential and commercial properties, tailored to each client's specific requirements.</p>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-2 text-green-800">Are your maintenance practices environmentally friendly?</h3>
+                <p>Absolutely! We prioritize eco-friendly products and practices, incorporating sustainable techniques whenever possible.</p>
             </div>
         </div>
     </section>
@@ -120,170 +115,8 @@
 
 {% block extra_css %}
 <style>
-    .service-hero {
-        background-image: url("{{ url_for('static', filename='images/landscaping-maintenance-hero.jpg') }}");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: #fff;
-        position: relative;
-    }
-
-    .service-hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-    }
-
-    .hero-content {
-        position: relative;
-        z-index: 1;
-        max-width: 800px;
-        padding: 2rem;
-        border-radius: 10px;
-        background: rgba(0, 0, 0, 0.6);
-        animation: fadeInUp 1s ease-out;
-    }
-
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .hero-content h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
+    .shadow-text {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .hero-content p {
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .highlight-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
-    
-    .highlight-item {
-        text-align: center;
-        padding: 2rem;
-        background-color: #f9f9f9;
-        border-radius: 10px;
-        transition: all 0.3s ease;
-    }
-    
-    .highlight-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .highlight-item i {
-        font-size: 3rem;
-        color: #4caf50;
-        margin-bottom: 1rem;
-    }
-    
-    .process-steps {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 2rem;
-    }
-    
-    .step {
-        flex: 1;
-        text-align: center;
-        padding: 0 1rem;
-        position: relative;
-    }
-    
-    .step:not(:last-child):after {
-        content: '';
-        position: absolute;
-        top: 30px;
-        right: -30%;
-        width: 60%;
-        height: 2px;
-        background-color: #4caf50;
-    }
-    
-    .step-number {
-        width: 60px;
-        height: 60px;
-        background-color: #4caf50;
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
-        margin: 0 auto 1rem;
-    }
-    
-    .faq-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-    
-    .faq-item {
-        background-color: #f9f9f9;
-        padding: 1.5rem;
-        border-radius: 10px;
-    }
-    
-    .faq-item h3 {
-        margin-bottom: 0.5rem;
-        color: #2c5e1a;
-    }
-    
-    @media (max-width: 992px) {
-        .highlight-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .process-steps {
-            flex-direction: column;
-        }
-        
-        .step:not(:last-child):after {
-            top: auto;
-            bottom: -30px;
-            right: auto;
-            left: 50%;
-            width: 2px;
-            height: 60px;
-        }
-        
-        .faq-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-    
-    @media (max-width: 576px) {
-        .highlight-grid {
-            grid-template-columns: 1fr;
-        }
     }
 </style>
 {% endblock %}
